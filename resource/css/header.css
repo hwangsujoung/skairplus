@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+.header_wrap{position: fixed; top:0; left:0; width: 100%; z-index: 10;}
+.header_wrap .header_con{display:flex; align-items: center; justify-content: space-between; padding-top: 15px; padding-left: 20px; padding-bottom: 23px; padding-right: 20px;
+    border-bottom: 1px solid #e7e7f3; background-color: #fff; box-sizing: border-box;}
+.header_wrap .logo_con{}
+.header_wrap .right_con{padding-top: 5px;}
+.header_wrap .gnb_wrap{display: none; vertical-align: middle; margin-right: 45px;}
+.header_wrap .gnb_wrap > ul{}
+.header_wrap .gnb_wrap > ul > li{display: inline-block; margin-right: 43px;}
+.header_wrap .gnb_wrap > ul > li:last-child{margin-right: 0;}
+.header_wrap .gnb_wrap > ul > li > a{}
+.header_wrap .gnb_wrap > ul > li > a > span{font-size:15px; font-size:1.5rem; line-height:21px; line-height:2.1rem; color: #adabbf; font-weight: 500;}
+.header_wrap .gnb_wrap > ul > li > a.active > span{color: #262b2f;}
+.header_wrap .menu_icon{display: inline-block; vertical-align: middle; font-size:0px; font-size:0rem; line-height:0px; line-height:0.0rem;}
+
+@media all and (min-width: 992px){
+    .header_wrap .header_con{padding-left: 38px; padding-right: 35px;}
+    .header_wrap .gnb_wrap{display: inline-block;}
+}
+
+@media all and (min-width: 1200px){
+
+}
+
+@media all and (min-width: 1600px){
+
+}

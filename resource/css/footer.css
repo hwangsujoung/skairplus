@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+.footer_wrap{width: 100%;}
+.footer_wrap .footer_con{display: flex; align-items: center; justify-content: flex-end; padding-top: 21px; padding-right: 20px; padding-bottom: 17px; padding-left: 20px; background-color: #fff;}
+.footer_wrap .copyright_con{font-size:14px; font-size:1.4rem; line-height:20px; line-height:2.0rem; color: #adabbf; margin-right: 18px;}
+.footer_wrap .logo_con{margin-right: 20px; margin-bottom: 20px;}
+.footer_wrap .move_to_top_con{display: flex; align-items: center; justify-content: center; width: 25px; height: 25px; border: 1px solid #e7e7f3; border-radius: 50%; box-sizing: border-box;}
+
+@media all and (min-width: 992px){
+    .footer_wrap .footer_con{padding-left: 35px; padding-right: 35px;}
+}
+
+@media all and (min-width: 1200px){
+    .footer_wrap .footer_con{padding-left: 100px; padding-right: 100px;}
+}
+
+@media all and (min-width: 1600px){
+
+}
