@@ -51,11 +51,12 @@ table{width:100%;border-spacing:0;table-layout:fixed}
 table td img{vertical-align:middle}
 a{display:inline-block;color:#262b2f;}
 a:link, a:visited, a:active, a:hover{text-decoration:none;color:inherit}
-body,p,div,ul,li,dl,dt,dd,ol,fieldset,textarea,input,select,table,th,td,address,cite,h1,h2,h3,h4,h5,h6,strong,b,label,button{font-family:  'SF UI Display', 'Spoqa Han Sans Neo', sans-serif; font-weight: 300;}
+body,p,div,ul,li,dl,dt,dd,ol,fieldset,textarea,input,select,table,th,td,address,cite,h1,h2,h3,h4,h5,h6,strong,b,label,button{font-family:  'SF UI Display', 'Spoqa Han Sans Neo', sans-serif;}
 strong,h1,h2,h3,h4,h5,h6,th,dt,li{font-size:inherit;font-weight:inherit;color:inherit}
-input{vertical-align:middle;outline:none}
-select{width:100%; font-size:12px;color:#262b2f; vertical-align:top;border-radius:0;-webkit-appearance:none;-moz-appearance: none;appearance: none}
+input{vertical-align:middle;outline:none; border: none; border-radius:0;-webkit-appearance:none;-moz-appearance: none;appearance: none;padding:0; margin:0;}
+select{width:100%; font-size:12px;color:#262b2f; vertical-align:top; border: none; border-radius:0;-webkit-appearance:none;-moz-appearance: none;appearance: none; padding:0; margin:0;}
 select::-ms-expand{display:none}
+option{border: none; border-radius:0;-webkit-appearance:none;-moz-appearance: none;appearance: none; padding:0; margin:0;}
 textarea{width:100%;background:#fff;box-sizing:border-box;vertical-align:middle;font-size:12px;color:#262b2f;resize:none}
 input[type='file'], input[type='image'], input[type='reset'], input[type='button'], input[type='submit']{cursor:pointer}
 hr{position:absolute;top:-9999px;left:-9999px}
