@@ -23,7 +23,7 @@
 .section .section_title_con .title_style_0_arrow{display: inline-block; vertical-align: middle; font-size:0px; font-size:0rem; line-height:0px; line-height:0.0rem;  margin-left: 15px; margin-right: 15px;}
 .section .section_con{margin-bottom: -15px;}
 .section .section_box{width:calc(100% + 10px); margin-left: -10px;}
-.section .section_box.show-flex{display: flex; flex-wrap: wrap; align-items: stretch;}
+.section .show-flex{display: flex; flex-wrap: wrap; align-items: stretch;}
 .section .section_box.show-flex .section_inner{height: 100%;}
 .section .section_item{padding-left: 10px; margin-bottom: 15px;}
 .section .section_item_title_con{font-size:0px; font-size:0rem; line-height:0px; line-height:0.0rem; padding: 27px 20px 28px; border-bottom: 1px solid #c9c9e4;}
@@ -47,7 +47,7 @@
 
 .content_wrap{margin-bottom: 50px;}
 .content_wrap:last-child{margin-bottom: 0;}
-.content_wrap .content_con{overflow-y: auto; margin-bottom: 40px;}
+.content_wrap .content_con{overflow-y: auto; margin-bottom: 50px;}
 .content_wrap .content_con:last-child{margin-bottom: 0;}
 
 .content_wrap .content_title_con{display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px;}
@@ -114,6 +114,27 @@
 .tab_style_3_wrap .tab_style_3_content{display: none;}
 .tab_style_3_wrap .tab_style_3_content.active{display: block;}
 
+.legend_con{width: 100%; font-size:0px; font-size:0rem; line-height:0px; line-height:0.0rem; text-align:left; padding-left: 60px; box-sizing: border-box;}
+.legend.type_1{display: inline-block; vertical-align: middle; font-size:0px; font-size:0rem; line-height:0px; line-height:0.0rem; margin-right: 18px;}
+.legend.type_1:last-child{margin-right: 0px;}
+.legend.type_1 .legend_color{display: inline-block;vertical-align: middle; width: 11px; height: 11px; margin-right: 6px; margin-bottom: 2px;}
+.legend.type_1 .legend_text{display: inline-block;vertical-align: middle; font-size:12px; font-size:1.2rem; line-height:18px; line-height:1.8rem; font-weight: 700;}
+
+.legend.type_2{display: inline-block; vertical-align: middle; font-size:0px; font-size:0rem; line-height:0px; line-height:0.0rem; margin-right: 18px; padding-left: 12px;}
+.legend.type_2:last-child{margin-right: 0px;}
+.legend.type_2 .legend_color_con{position: relative; display: inline-block;vertical-align: middle; margin-right: 22px; margin-bottom: 2px;}
+.legend.type_2 .legend_color_con:before{content:''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: calc(100% + 24px); border-bottom: 2px solid var(--legendColor);  }
+.legend.type_2 .legend_color{position: relative; display: inline-block;vertical-align: middle; width: 14px; height: 14px; background-color: #fff; border: 2px solid var(--legendColor); border-radius: 50%; overflow: hidden; box-sizing: border-box;}
+.legend.type_2 .legend_text{display: inline-block;vertical-align: middle; font-size:12px; font-size:1.2rem; line-height:18px; line-height:1.8rem; font-weight: 700;}
+
+.legend_con.right{text-align: right;}
+.legend_con.right .legend{margin-left: 18px; margin-right: 0px;}
+.legend_con.right .legend:first-child{margin-left: 0px;}
+
+.legend_con.left{text-align: left;}
+.legend_con.left .legend{margin-left: 0px; margin-right: 18px;}
+.legend_con.left .legend:last-child{margin-right: 0px;}
+
 .graph_style_0_wrap{min-width: 530px;}
 .graph_style_0_wrap .yaxis{width: 60px;}
 .graph_style_0_wrap .yaxis .label{font-family: 'Lato', sans-serif; font-size:12px; font-size:1.2rem; line-height:18px; line-height:1.8rem; font-weight: 700; color: #adabbf; text-align:right;
@@ -125,15 +146,6 @@
 .graph_style_0_wrap .graph_style_0{position: absolute; top:0; left: 0; width: 100%; height: 100%;}
 .graph_style_0_wrap .graph_style_0_bg{width: 100%;}
 .graph_style_0_wrap .graph_style_0_bg .bg_box{width: 100%; height: 40px; border-bottom: 1px solid #e7e7f3; box-sizing: border-box;}
-.graph_style_0_wrap .legend_con{width: 100%; font-size:0px; font-size:0rem; line-height:0px; line-height:0.0rem; text-align:right; padding-left: 60px; box-sizing: border-box;}
-.graph_style_0_wrap .legend_con .legend{display: inline-block; vertical-align: middle; font-size:0px; font-size:0rem; line-height:0px; line-height:0.0rem; margin-left: 18px;}
-.graph_style_0_wrap .legend_con .legend:first-child{margin-left: 0;}
-.graph_style_0_wrap .legend_con .legend_color{display: inline-block;vertical-align: middle; width: 11px; height: 11px; margin-right: 6px; margin-bottom: 2px;}
-.graph_style_0_wrap .legend_con .legend_text{display: inline-block;vertical-align: middle; font-size:12px; font-size:1.2rem; line-height:18px; line-height:1.8rem; font-weight: 700;}
-
-.graph_style_0_wrap .legend_con.left{text-align: left;}
-.graph_style_0_wrap .legend_con.left .legend{margin-left: 20px; margin-right: 0;}
-.graph_style_0_wrap .legend_con.left .legend:first-child{margin-left: 0px;}
 
 .graph_style_0_wrap.type_2{}
 .graph_style_0_wrap.type_2 .yaxis{width: 42px;}
@@ -145,7 +157,7 @@
 .graph_style_0_wrap.type_3 .yaxis{width: 42px;}
 .graph_style_0_wrap.type_3 .yaxis .label{padding-right: 22px; }
 .graph_style_0_wrap.type_3 .xaxis{padding-left: 42px; margin-top: 5px;}
-.graph_style_0_wrap.type_3 .legend_con{padding-left: 42px;}
+.graph_style_0_wrap.type_3 .legend_0_con{padding-left: 42px;}
 
 
 .graph_style_1_wrap{min-width: 530px; padding-right: 20px; overflow: hidden;}
@@ -160,11 +172,7 @@
 .graph_style_1_wrap .graph_style_1{position: absolute; top:20px; left: 0; width: 100%; height: calc(100% - 40px);}
 .graph_style_1_wrap .graph_style_1_bg{display: flex; width: 100%; height: 100%;}
 .graph_style_1_wrap .graph_style_1_bg .bg_box{flex: 1; height: 100%; border-left: 1px solid #e7e7f3; box-sizing: border-box;}
-.graph_style_1_wrap .legend_con{width: 100%; font-size:0px; font-size:0rem; line-height:0px; line-height:0.0rem; text-align:left; padding-left: 70px; margin-top: 24px; box-sizing: border-box;}
-.graph_style_1_wrap .legend_con .legend{display: inline-block; vertical-align: middle; font-size:0px; font-size:0rem; line-height:0px; line-height:0.0rem; margin-right: 31px;}
-.graph_style_1_wrap .legend_con .legend:last-child{margin-right: 0;}
-.graph_style_1_wrap .legend_con .legend_color{display: inline-block;vertical-align: middle; width: 11px; height: 11px; margin-right: 7px;}
-.graph_style_1_wrap .legend_con .legend_text{display: inline-block;vertical-align: middle; font-size:12px; font-size:1.2rem; line-height:18px; line-height:1.8rem; font-weight: 700;}
+.graph_style_1_wrap .legend_con{padding-left: 70px; margin-top: 24px;}
 
 .graph_style_1_wrap.type_2 .yaxis .label{padding-top: 16px; padding-bottom: 16px; margin-bottom: 48px;}
 .graph_style_1_wrap.type_2 .yaxis .label:last-child{margin-bottom: 30px;}
@@ -190,13 +198,7 @@
 .graph_style_2_wrap .graph_style_2_bg .bg_box{flex: 1; height: 100%; border-right: 1px solid #e7e7f3; box-sizing: border-box;
     background-image: url('/resource/img/graph_style_2_bg.png'); background-position: center;}
 .graph_style_2_wrap .graph_style_2_bg .bg_box:first-child{background-image: none;}
-.graph_style_2_wrap .legend_con{width: 100%; font-size:0px; font-size:0rem; line-height:0px; line-height:0.0rem; text-align:left; padding-left: 50px; box-sizing: border-box;}
-.graph_style_2_wrap .legend_con .legend{display: inline-block; vertical-align: middle; font-size:0px; font-size:0rem; line-height:0px; line-height:0.0rem; margin-right: 20px; padding-left: 12px;}
-.graph_style_2_wrap .legend_con .legend:last-child{margin-right: 0;}
-.graph_style_2_wrap .legend_con .legend_color_con{position: relative; display: inline-block;vertical-align: middle; margin-right: 22px; margin-bottom: 2px;}
-.graph_style_2_wrap .legend_con .legend_color_con:before{content:''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: calc(100% + 24px); border-bottom: 2px solid var(--legendColor);  }
-.graph_style_2_wrap .legend_con .legend_color{position: relative; display: inline-block;vertical-align: middle; width: 14px; height: 14px; background-color: #fff; border: 2px solid var(--legendColor); border-radius: 50%; overflow: hidden; box-sizing: border-box;}
-.graph_style_2_wrap .legend_con .legend_text{display: inline-block;vertical-align: middle; font-size:12px; font-size:1.2rem; line-height:18px; line-height:1.8rem; font-weight: 700;}
+.graph_style_2_wrap .legend_con{padding-left: 50px;}
 
 .table_style_0_wrap{}
 .table_style_0_wrap .table_style_0_con{overflow-y: auto;}
@@ -292,6 +294,18 @@
 .btn_style_0_con{width: 41px; height: 41px; background-color: #fff; border: 1px solid #e7e7f3; box-sizing: border-box; border-radius: 7px; overflow: hidden;}
 .btn_style_0{display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%;}
 
+
+/*report*/
+.plant_title_con{display: flex; align-items: center; justify-content: center; padding-top: 31px; padding-bottom: 32px;}
+.plant_title_con .other_plant_title{font-size:14px; font-size:1.4rem; line-height:20px; line-height:2.0rem; font-weight: 700; color: #6d7a8d;}
+.plant_title_con .plant_title{font-size:23px; font-size:2.3rem; line-height:29px; line-height:2.9rem; font-weight: 700;}
+.plant_title_con .plant_title .logo_icon{vertical-align: middle; padding-bottom: 4px;}
+.plant_title_con .arrow{margin-left: 28px; margin-right: 28px;}
+
+.plant_time_con{margin-bottom: 47px;}
+.plant_time_con .running_time{font-size:60px; font-size:6.0rem; line-height:66px; line-height:6.6rem; font-weight: 700; text-align: center; margin-bottom: 10px;}
+.plant_time_con .running_date{font-size:17px; font-size:1.7rem; line-height:23px; line-height:2.3rem; font-weight: 700; text-align: center; color: #adabbf;}
+
 @media all and (min-width: 992px){
 
     .col-md-60{width: 60%;}
@@ -334,8 +348,9 @@
 @media all and (min-width: 1200px){
     .container{max-width: 2000px; padding: 0 100px;}
 
-    .graph_style_0_wrap .legend_con .legend_color{margin-right: 7px;}
-    .graph_style_0_wrap .legend_con .legend{margin-left: 31px;}
+    .legend_con .legend_color{margin-right: 7px;}
+    .legend_con .legend{margin-right: 31px;}
+    .legend_con.right .legend{margin-left: 31px;}
 
     .section .section_content.type_2 .content_wrap:nth-child(2n-1){padding-right: 60px;}
     .section .section_content.type_2 .content_wrap:nth-child(2n){padding-left: 35px; padding-right: 25px;}
