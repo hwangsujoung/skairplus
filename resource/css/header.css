@@ -5,14 +5,14 @@
     border-bottom: 1px solid #e7e7f3; background-color: #fff; box-sizing: border-box;}
 .header_wrap .logo_con{}
 .header_wrap .right_con{font-size:0px; font-size:0rem; line-height:0px; line-height:0.0rem; padding-top: 7px;}
-.header_wrap .gnb_wrap{display: none; vertical-align: middle; margin-right: 30px;}
+.header_wrap .gnb_wrap{display: none; vertical-align: middle;}
 .header_wrap .gnb_wrap > ul{font-size:0px; font-size:0rem; line-height:0px; line-height:0.0rem;}
 .header_wrap .gnb_wrap > ul > li{display: inline-block; vertical-align: middle; margin-right: 30px;}
 .header_wrap .gnb_wrap > ul > li:last-child{margin-right: 0;}
 .header_wrap .gnb_wrap > ul > li > a{}
 .header_wrap .gnb_wrap > ul > li > a > span{font-size:15px; font-size:1.5rem; line-height:21px; line-height:2.1rem; color: #adabbf; font-weight: 500;}
 .header_wrap .gnb_wrap > ul > li > a.active > span{color: #262b2f;}
-.header_wrap .menu_icon{display: inline-block; vertical-align: middle; font-size:0px; font-size:0rem; line-height:0px; line-height:0.0rem;}
+.header_wrap .menu_icon{display: none; vertical-align: middle; font-size:0px; font-size:0rem; line-height:0px; line-height:0.0rem; margin-left: 30px;}
 
 @media all and (min-width: 992px){
     .header_wrap .header_con{padding-left: 38px; padding-right: 35px;}
@@ -21,8 +21,8 @@
 }
 
 @media all and (min-width: 1200px){
-    .header_wrap .gnb_wrap{margin-right: 45px;}
     .header_wrap .gnb_wrap > ul > li{margin-right: 43px;}
+    .header_wrap .menu_icon{margin-left: 45px;}
 }
 
 @media all and (min-width: 1600px){
