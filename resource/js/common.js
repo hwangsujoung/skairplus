@@ -28,7 +28,6 @@ $(function(){
    if($('body').find('[data-tab]').length > 0){
         for(var i=0; i<$('body').find('[data-tab]').length; i++){
             var tab = $('body').find('[data-tab]')[i];
-            console.log($(tab).attr('data-tab'))
             if($(tab).attr('data-tab')){
                 var tabId = $(tab).attr('data-tab');
                 new Tab($(tab).find('[data-tab-menu="'+tabId+'"]'), $(tab).find('[data-tab-content="'+tabId+'"]'), 'active');
