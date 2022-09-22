@@ -14,6 +14,7 @@
     <script type="text/javascript" src="/resource/js/jquery-1.12.0.js"></script>
     <script type="text/javascript" src="/resource/js/tab.js"></script>
     <script type="text/javascript" src="/resource/js/common.js"></script>
+    <script type="text/javascript" src="/resource/js/masonry.js"></script>
 </head>
 <body>
 <div class="wrapper main">
@@ -36,7 +37,7 @@
                                         <div class="col-12 content_title_con">
                                             <div class="left_con">
                                                 <span class="title_style_0_con">
-                                                    <span class="mt3 title_style_0_icon"><img src="/resource/img/title_icon_000.png" alt=""></span>
+                                                    <span class="mt2 title_style_0_icon"><img src="/resource/img/title_icon_000.png" alt=""></span>
                                                     <span class="title_style_0">제품 생산량</span>
                                                 </span>
                                                 <span class="date_con">
@@ -484,53 +485,67 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="col-12 plant_time_con type_2">
+                                            <div class="running_time">29day 08:29</div>
+                                            <div class="running_date">21’ Jul-03 : MAC Trip (판넬과열 예상) 시 B/up 전환 지연
+                                            </div>
+                                        </div>
                                         <div class="col-12 table_style_2_wrap">
                                             <div class="col-12 table_style_2_con">
                                                 <table class="table_style_2">
                                                     <colgroup>
+                                                        <col style="width:15%">
+                                                        <col style="width:15%">
+                                                        <col style="width:15%">
                                                         <col style="width:25%">
-                                                        <col style="width:25%">
-                                                        <col style="width:25%">
-                                                        <col style="width:25%">
+                                                        <col style="width:30%">
                                                     </colgroup>
                                                     <thead>
                                                     <tr>
-                                                        <th>항목</th>
-                                                        <th>생산량</th>
-                                                        <th>공급량</th>
-                                                        <th class="point2">생산률(%)</th>
+                                                        <th>Plant</th>
+                                                        <th>Type</th>
+                                                        <th>Date</th>
+                                                        <th>Cause</th>
+                                                        <th>Action</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
                                                     <tr>
-                                                        <td>GN2</td>
-                                                        <td>212.4</td>
-                                                        <td><span class="up">3.3</span></td>
-                                                        <td><span class="up">1.6%</span></td>
+                                                        <td>TCN#2</td>
+                                                        <td>Trip</td>
+                                                        <td>'21 04.01</td>
+                                                        <td>MAC Trip
+                                                            (판넬과열 예상) 시
+                                                            B/up 전환 지연
+                                                        </td>
+                                                        <td>SKH
+                                                            고객 대응중
+                                                        </td>
                                                     </tr>
                                                     <tr>
-                                                        <td>GO2</td>
-                                                        <td>212.4</td>
-                                                        <td><span class="up">3.3</span></td>
-                                                        <td><span class="up">1.6%</span></td>
+                                                        <td>TCN#1</td>
+                                                        <td>Trip</td>
+                                                        <td>'22 07.03</td>
+                                                        <td>계기/전기 오작동
+                                                            발생 (Vibration
+                                                            Sensor 민감도)
+                                                        </td>
+                                                        <td>Vibration Sensor<br/>
+                                                            신품 교체 및
+                                                            정상화 완료
+                                                        </td>
                                                     </tr>
                                                     <tr>
-                                                        <td>LAr</td>
-                                                        <td>212.4</td>
-                                                        <td><span class="up">3.3</span></td>
-                                                        <td><span class="up">1.6%</span></td>
-                                                    </tr>
-                                                    <tr class="active">
-                                                        <td>LN2</td>
-                                                        <td>212.4</td>
-                                                        <td><span class="up">3.3</span></td>
-                                                        <td><span class="up">1.6%</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>LO2</td>
-                                                        <td>212.4</td>
-                                                        <td><span class="up">3.3</span></td>
-                                                        <td><span class="up">1.6%</span></td>
+                                                        <td>TCN#2</td>
+                                                        <td>Trip</td>
+                                                        <td>'22 07.03</td>
+                                                        <td>MAC Trip
+                                                            (판넬과열 예상) 시
+                                                            B/up 전환 지연
+                                                        </td>
+                                                        <td>SKH
+                                                            고객 대응중
+                                                        </td>
                                                     </tr>
                                                     </tbody>
                                                 </table>
@@ -561,53 +576,84 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="col-12 graph_style_0_wrap type_3">
+                                            <div class="col-12 yaxis">
+                                                <div class="label">16</div>
+                                                <div class="label">14</div>
+                                                <div class="label">12</div>
+                                                <div class="label">10</div>
+                                                <div class="label">8</div>
+                                                <div class="label">6</div>
+                                                <div class="label">4</div>
+                                                <div class="label">2</div>
+                                                <div class="label">0</div>
+                                            </div>
+                                            <div class="col-12 graph_style_0_con">
+                                                <div class="graph_style_0"></div>
+                                                <div class="graph_style_0_bg">
+                                                    <div class="bg_box"></div>
+                                                    <div class="bg_box"></div>
+                                                    <div class="bg_box"></div>
+                                                    <div class="bg_box"></div>
+                                                    <div class="bg_box"></div>
+                                                    <div class="bg_box"></div>
+                                                    <div class="bg_box"></div>
+                                                    <div class="bg_box"></div>
+                                                    <div class="bg_box"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 xaxis">
+                                                <div class="label">GC</div>
+                                                <div class="label">H2O</div>
+                                                <div class="label">O2</div>
+                                                <div class="label">Paricle</div>
+                                                <div class="label">etc.</div>
+                                            </div>
+                                            <div class="col-12 legend_con">
+                                                <div class="legend type_1">
+                                                    <div class="legend_color" style="background-color: #3eaec3;"></div>
+                                                    <div class="legend_text">보유수량</div>
+                                                </div>
+                                                <div class="legend type_1">
+                                                    <div class="legend_color" style="background-color: #a1d06d;"></div>
+                                                    <div class="legend_text">고장</div>
+                                                </div>
+                                                <div class="legend type_1">
+                                                    <div class="legend_color" style="background-color: #efc443;"></div>
+                                                    <div class="legend_text">고정현황</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 content_con">
                                         <div class="col-12 table_style_2_wrap">
                                             <div class="col-12 table_style_2_con">
                                                 <table class="table_style_2">
                                                     <colgroup>
-                                                        <col style="width:25%">
-                                                        <col style="width:25%">
-                                                        <col style="width:25%">
-                                                        <col style="width:25%">
+                                                        <col style="width:20%">
+                                                        <col style="width:20%">
+                                                        <col style="width:30%">
+                                                        <col style="width:30%">
                                                     </colgroup>
                                                     <thead>
                                                     <tr>
-                                                        <th>항목</th>
-                                                        <th>생산량</th>
-                                                        <th>공급량</th>
-                                                        <th class="point2">생산률(%)</th>
+                                                        <th>Date</th>
+                                                        <th>Type</th>
+                                                        <th>Cause</th>
+                                                        <th>Action</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
                                                     <tr>
-                                                        <td>GN2</td>
-                                                        <td>212.4</td>
-                                                        <td><span class="up">3.3</span></td>
-                                                        <td><span class="up">1.6%</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>GO2</td>
-                                                        <td>212.4</td>
-                                                        <td><span class="up">3.3</span></td>
-                                                        <td><span class="up">1.6%</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>LAr</td>
-                                                        <td>212.4</td>
-                                                        <td><span class="up">3.3</span></td>
-                                                        <td><span class="up">1.6%</span></td>
-                                                    </tr>
-                                                    <tr class="active">
-                                                        <td>LN2</td>
-                                                        <td>212.4</td>
-                                                        <td><span class="up">3.3</span></td>
-                                                        <td><span class="up">1.6%</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>LO2</td>
-                                                        <td>212.4</td>
-                                                        <td><span class="up">3.3</span></td>
-                                                        <td><span class="up">1.6%</span></td>
+                                                        <td>22.07.03</td>
+                                                        <td>H2O</td>
+                                                        <td>HALO KA(Portable)
+                                                            Zero Base 상승
+                                                        </td>
+                                                        <td>
+                                                            P-N2 분석기 Cleaning
+                                                            진행 중
+                                                        </td>
                                                     </tr>
                                                     </tbody>
                                                 </table>
@@ -628,7 +674,7 @@
                                             <div class="left_con">
                                                 <span class="title_style_0_con">
                                                     <span class="mt3 title_style_0_icon"><img src="/resource/img/title_icon_004.png" alt=""></span>
-                                                    <span class="title_style_0">EARLY WARNING [3 SIGMA]</span>
+                                                    <span class="title_style_0">early warning [3 sigma]</span>
                                                 </span>
                                             </div>
                                             <div class="right_con">
@@ -639,56 +685,214 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-12 table_style_2_wrap">
-                                            <div class="col-12 table_style_2_con">
-                                                <table class="table_style_2">
-                                                    <colgroup>
-                                                        <col style="width:25%">
-                                                        <col style="width:25%">
-                                                        <col style="width:25%">
-                                                        <col style="width:25%">
-                                                    </colgroup>
-                                                    <thead>
-                                                    <tr>
-                                                        <th>항목</th>
-                                                        <th>생산량</th>
-                                                        <th>공급량</th>
-                                                        <th class="point2">생산률(%)</th>
-                                                    </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                    <tr>
-                                                        <td>GN2</td>
-                                                        <td>212.4</td>
-                                                        <td><span class="up">3.3</span></td>
-                                                        <td><span class="up">1.6%</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>GO2</td>
-                                                        <td>212.4</td>
-                                                        <td><span class="up">3.3</span></td>
-                                                        <td><span class="up">1.6%</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>LAr</td>
-                                                        <td>212.4</td>
-                                                        <td><span class="up">3.3</span></td>
-                                                        <td><span class="up">1.6%</span></td>
-                                                    </tr>
-                                                    <tr class="active">
-                                                        <td>LN2</td>
-                                                        <td>212.4</td>
-                                                        <td><span class="up">3.3</span></td>
-                                                        <td><span class="up">1.6%</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>LO2</td>
-                                                        <td>212.4</td>
-                                                        <td><span class="up">3.3</span></td>
-                                                        <td><span class="up">1.6%</span></td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
+                                        <div class="col-12 tab_style_3_wrap" data-tab="warning">
+                                            <div class="col-12 tab_style_3_con">
+                                                <div class="tab_style_3 active" data-tab-menu="warning">전체</div>
+                                                <div class="tab_style_3" data-tab-menu="warning">압력</div>
+                                                <div class="tab_style_3" data-tab-menu="warning">유량</div>
+                                                <div class="tab_style_3" data-tab-menu="warning">순도</div>
+                                            </div>
+                                            <div class="col-12 tab_style_3_content_con">
+                                                <div class="col-12 tab_style_3_content active" data-tab-content="warning">
+                                                    <div class="col-12 tc mb40">
+                                                        <img src="/resource/img/early_warning_tmp_graph_000.png" alt="">
+                                                    </div>
+                                                    <div class="col-12 table_style_2_wrap">
+                                                        <div class="col-12 table_style_2_con">
+                                                            <table class="table_style_2">
+                                                                <colgroup>
+                                                                    <col style="width:20%">
+                                                                    <col style="width:20%%">
+                                                                    <col style="width:60%">
+                                                                </colgroup>
+                                                                <thead>
+                                                                <tr>
+                                                                    <th>Input Date</th>
+                                                                    <th>Item</th>
+                                                                    <th>Alarm</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td>22.07.03</td>
+                                                                    <td>공급압력</td>
+                                                                    <td>N2 공급압력 Early Warning(LL)</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>22.07.03</td>
+                                                                    <td>공급순도</td>
+                                                                    <td>N2 공급순도(H2O) Early Warning(HH)</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>22.07.03</td>
+                                                                    <td>공급순도</td>
+                                                                    <td>N2 공급순도(H2O) Early Warning(HH)</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>22.07.03</td>
+                                                                    <td>공급압력</td>
+                                                                    <td>N2 공급압력 Early Warning(HH)</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>22.07.03</td>
+                                                                    <td>공급압력</td>
+                                                                    <td>N2 공급압력 Early Warning(LL)</td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 tab_style_3_content" data-tab-content="warning">
+                                                    <div class="col-12 tc mb40">
+                                                        <img src="/resource/img/early_warning_tmp_graph_000.png" alt="">
+                                                    </div>
+                                                    <div class="col-12 table_style_2_wrap">
+                                                        <div class="col-12 table_style_2_con">
+                                                            <table class="table_style_2">
+                                                                <colgroup>
+                                                                    <col style="width:20%">
+                                                                    <col style="width:20%%">
+                                                                    <col style="width:60%">
+                                                                </colgroup>
+                                                                <thead>
+                                                                <tr>
+                                                                    <th>Input Date</th>
+                                                                    <th>Item</th>
+                                                                    <th>Alarm</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td>22.07.03</td>
+                                                                    <td>공급압력</td>
+                                                                    <td>N2 공급압력 Early Warning(LL)</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>22.07.03</td>
+                                                                    <td>공급압력</td>
+                                                                    <td>N2 공급압력(H2O) Early Warning(HH)</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>22.07.03</td>
+                                                                    <td>공급압력</td>
+                                                                    <td>N2 공급압력(H2O) Early Warning(HH)</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>22.07.03</td>
+                                                                    <td>공급압력</td>
+                                                                    <td>N2 공급압력 Early Warning(HH)</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>22.07.03</td>
+                                                                    <td>공급압력</td>
+                                                                    <td>N2 공급압력 Early Warning(LL)</td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 tab_style_3_content" data-tab-content="warning">
+                                                    <div class="col-12 tc mb40">
+                                                        <img src="/resource/img/early_warning_tmp_graph_000.png" alt="">
+                                                    </div>
+                                                    <div class="col-12 table_style_2_wrap">
+                                                        <div class="col-12 table_style_2_con">
+                                                            <table class="table_style_2">
+                                                                <colgroup>
+                                                                    <col style="width:20%">
+                                                                    <col style="width:20%%">
+                                                                    <col style="width:60%">
+                                                                </colgroup>
+                                                                <thead>
+                                                                <tr>
+                                                                    <th>Input Date</th>
+                                                                    <th>Item</th>
+                                                                    <th>Alarm</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td>22.07.03</td>
+                                                                    <td>공급유량</td>
+                                                                    <td>N2 공급유량 Early Warning(LL)</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>22.07.03</td>
+                                                                    <td>공급유량</td>
+                                                                    <td>N2 공급유량(H2O) Early Warning(HH)</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>22.07.03</td>
+                                                                    <td>공급유량</td>
+                                                                    <td>N2 공급유량(H2O) Early Warning(HH)</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>22.07.03</td>
+                                                                    <td>공급유량</td>
+                                                                    <td>N2 공급유량 Early Warning(HH)</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>22.07.03</td>
+                                                                    <td>공급유량</td>
+                                                                    <td>N2 공급유량 Early Warning(LL)</td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 tab_style_3_content" data-tab-content="warning">
+                                                    <div class="col-12 tc mb40">
+                                                        <img src="/resource/img/early_warning_tmp_graph_000.png" alt="">
+                                                    </div>
+                                                    <div class="col-12 table_style_2_wrap">
+                                                        <div class="col-12 table_style_2_con">
+                                                            <table class="table_style_2">
+                                                                <colgroup>
+                                                                    <col style="width:20%">
+                                                                    <col style="width:20%%">
+                                                                    <col style="width:60%">
+                                                                </colgroup>
+                                                                <thead>
+                                                                <tr>
+                                                                    <th>Input Date</th>
+                                                                    <th>Item</th>
+                                                                    <th>Alarm</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td>22.07.03</td>
+                                                                    <td>공급순도</td>
+                                                                    <td>N2 공급순도 Early Warning(LL)</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>22.07.03</td>
+                                                                    <td>공급순도</td>
+                                                                    <td>N2 공급순도(H2O) Early Warning(HH)</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>22.07.03</td>
+                                                                    <td>공급순도</td>
+                                                                    <td>N2 공급순도(H2O) Early Warning(HH)</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>22.07.03</td>
+                                                                    <td>공급순도</td>
+                                                                    <td>N2 공급순도 Early Warning(HH)</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>22.07.03</td>
+                                                                    <td>공급순도</td>
+                                                                    <td>N2 공급순도 Early Warning(LL)</td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -707,6 +911,9 @@
                                                     <span class="mt3 title_style_0_icon"><img src="/resource/img/title_icon_004.png" alt=""></span>
                                                     <span class="title_style_0">VOC 현황</span>
                                                 </span>
+                                                <span class="date_con">
+                                                    <span class="date">Voice of Customer</span>
+                                                </span>
                                             </div>
                                             <div class="right_con">
                                                 <div class="content_btn_con">
@@ -720,49 +927,48 @@
                                             <div class="col-12 table_style_2_con">
                                                 <table class="table_style_2">
                                                     <colgroup>
-                                                        <col style="width:25%">
-                                                        <col style="width:25%">
-                                                        <col style="width:25%">
-                                                        <col style="width:25%">
+                                                        <col style="width:16%">
+                                                        <col style="width:16%">
+                                                        <col style="width:32%">
+                                                        <col style="width:16%">
+                                                        <col style="width:20%">
                                                     </colgroup>
                                                     <thead>
                                                     <tr>
-                                                        <th>항목</th>
-                                                        <th>생산량</th>
-                                                        <th>공급량</th>
-                                                        <th class="point2">생산률(%)</th>
+                                                        <th>22.07.03</th>
+                                                        <th>Client</th>
+                                                        <th>내용</th>
+                                                        <th>현황</th>
+                                                        <th>비고</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
                                                     <tr>
-                                                        <td>GN2</td>
-                                                        <td>212.4</td>
-                                                        <td><span class="up">3.3</span></td>
-                                                        <td><span class="up">1.6%</span></td>
+                                                        <td>22.07.03</td>
+                                                        <td>SK Hynix (청주)</td>
+                                                        <td>Trip 및 백업 지연 원인
+                                                            및 재발방지 대책 요청
+                                                        </td>
+                                                        <td>진행중</td>
+                                                        <td>생산2팀 주관 업무 대응 중</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>GO2</td>
-                                                        <td>212.4</td>
-                                                        <td><span class="up">3.3</span></td>
-                                                        <td><span class="up">1.6%</span></td>
+                                                        <td>22.07.03</td>
+                                                        <td>SK Hynix (청주)</td>
+                                                        <td>Trip 및 백업 지연 원인
+                                                            및 재발방지 대책 요청
+                                                        </td>
+                                                        <td>진행중</td>
+                                                        <td>생산2팀 주관 업무 대응 중</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>LAr</td>
-                                                        <td>212.4</td>
-                                                        <td><span class="up">3.3</span></td>
-                                                        <td><span class="up">1.6%</span></td>
-                                                    </tr>
-                                                    <tr class="active">
-                                                        <td>LN2</td>
-                                                        <td>212.4</td>
-                                                        <td><span class="up">3.3</span></td>
-                                                        <td><span class="up">1.6%</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>LO2</td>
-                                                        <td>212.4</td>
-                                                        <td><span class="up">3.3</span></td>
-                                                        <td><span class="up">1.6%</span></td>
+                                                        <td>22.07.03</td>
+                                                        <td>SK Hynix (청주)</td>
+                                                        <td>Trip 및 백업 지연 원인
+                                                            및 재발방지 대책 요청
+                                                        </td>
+                                                        <td>진행중</td>
+                                                        <td>생산2팀 주관 업무 대응 중</td>
                                                     </tr>
                                                     </tbody>
                                                 </table>

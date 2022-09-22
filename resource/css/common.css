@@ -38,7 +38,7 @@
 
 .section_item .title_style_0_con{font-size:0px; font-size:0rem; line-height:0px; line-height:0.0rem; margin-bottom: 35px;}
 .section_item .title_style_0_con > span{display: inline-block; vertical-align: middle;}
-.section_item .title_style_0_con .title_style_0_icon{font-size:0px; font-size:0rem; line-height:0px; line-height:0.0rem; margin-right: 16px;}
+.section_item .title_style_0_con .title_style_0_icon{font-size:0px; font-size:0rem; line-height:0px; line-height:0.0rem; margin-right: 12px;}
 .section_item .title_style_0_con > a{display: inline-block; vertical-align: middle; font-size:0px; font-size:0rem; line-height:0px; line-height:0.0rem;}
 .section_item .title_style_1_con{margin-bottom: 15px;}
 .section_item .title_style_1_con > span{display: inline-block; vertical-align: middle;}
@@ -249,7 +249,8 @@
 .table_style_2 tbody tr{border-bottom: 1px solid #e7e7f3;}
 .table_style_2 tbody th{height: 48px; font-size:13px; font-size:1.3rem; line-height:19px; line-height:1.9rem; font-weight: 500; color: #8f949a; text-align: center;
     background-color: #fbfbfb;}
-.table_style_2 tbody td{height:var(--tdHeight); font-size:13px; font-size:1.3rem; line-height:19px; line-height:1.9rem; font-weight: 400; text-align: center; }
+.table_style_2 tbody td{height:var(--tdHeight); font-size:13px; font-size:1.3rem; line-height:19px; line-height:1.9rem; font-weight: 400; text-align: center; word-break: keep-all;
+    padding: 15px 5px; box-sizing: border-box;}
 .table_style_2 tbody td *{font-size:13px; font-size:1.3rem; line-height:19px; line-height:1.9rem;}
 .table_style_2 tbody td.tl{text-align: left;}
 .table_style_2 tbody td.tr{text-align: right;}
@@ -302,6 +303,10 @@
 .plant_time_con .running_time{font-size:45px; font-size:4.5rem; line-height:52px; line-height:5.1rem; font-weight: 700; text-align: center; margin-bottom: 10px;}
 .plant_time_con .running_date{font-size:15px; font-size:1.5rem; line-height:21px; line-height:2.1rem; font-weight: 700; text-align: center; color: #adabbf;}
 
+.plant_time_con.type_2{}
+.plant_time_con.type_2 .running_time{font-size:38px; font-size:3.8rem; line-height:44px; line-height:4.4rem; }
+.plant_time_con.type_2 .running_date{font-size:14px; font-size:1.4rem; line-height:20px; line-height:2.0rem; color: #262b2f;}
+
 @media all and (min-width: 768px){
     .legend.type_1{margin-right: 18px;}
     .legend.type_2{margin-right: 18px;}
@@ -341,6 +346,8 @@
     .section .section_content.type_3 .content_wrap:nth-child(2n-1){padding-right: 15px;}
     .section .section_content.type_3 .content_wrap:nth-child(2n){padding-left: 15px;}
     .section .section_content.type_3 .content_wrap:nth-last-child(2){margin-bottom: 0;}
+
+    .section_item .title_style_0_con .title_style_0_icon{margin-right: 16px;}
 
     .content_wrap{margin-bottom: 50px;}
     .content_wrap .content_con{overflow-y: visible;}
