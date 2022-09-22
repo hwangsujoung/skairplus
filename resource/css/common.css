@@ -196,6 +196,17 @@
 .graph_style_2_wrap .graph_style_2_bg .bg_box:first-child{background-image: none;}
 .graph_style_2_wrap .legend_con{padding-left: 50px;}
 
+.graph_style_3_wrap{display: flex; flex-wrap: wrap; align-items: stretch; min-width: 530px;}
+.graph_style_3_wrap .graph_style_3_desc_con{display: flex; justify-content: space-between; box-sizing: border-box; margin-bottom: 15px;}
+.graph_style_3_wrap .graph_style_3_desc{font-size:16px; font-size:1.6rem; line-height:22px; line-height:2.2rem; font-weight: 500; }
+.graph_style_3_wrap .graph_style_3_desc.left{color:#fd1c6b; text-align: left;}
+.graph_style_3_wrap .graph_style_3_desc.right{color:#3e94ea; text-align:right;}
+.graph_style_3_wrap .xaxis{display: flex; width: 100%; padding-top: 14px; border-top: 2px solid #a8b5c6; box-sizing: border-box;}
+.graph_style_3_wrap .xaxis .label{flex: 1; font-family: 'Lato', sans-serif; font-size:12px; font-size:1.2rem; line-height:18px; line-height:1.8rem; font-weight: 700; color: #adabbf; text-align: center;}
+.graph_style_3_wrap .graph_style_3_con{width: 100%; overflow: hidden;}
+.graph_style_3_wrap .graph_style_3{width: 100%; height: 100%; min-height:130px;}
+.graph_style_3_wrap .legend_con{padding-left: 50px;}
+
 .table_style_0_wrap{}
 .table_style_0_wrap .table_style_0_con{overflow-y: auto;}
 .table_style_0{border-collapse: collapse;}
@@ -291,6 +302,12 @@
 .btn_style_0_con{width: 41px; height: 41px; background-color: #fff; border: 1px solid #e7e7f3; box-sizing: border-box; border-radius: 7px; overflow: hidden;}
 .btn_style_0{display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%;}
 
+.btn_style_1_wrap{font-size:0px; font-size:0rem; line-height:0px; line-height:0.0rem; margin-top: -9px;}
+.btn_style_1_con{display: inline-block; vertical-align: middle; width: 37px; height: 37px; background-color: #fbfbfb; border: 1px solid #e7e7f3; box-sizing: border-box; border-radius: 7px; overflow: hidden; margin-right: 5px;}
+.btn_style_1_con:last-child{margin-right: 0;}
+.btn_style_1_con .btn_style_1{display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%;
+    font-size:14px; font-size:1.4rem; line-height:20px; line-height:2.0rem; color: #262b2f; font-weight: 400;}
+.btn_style_1_con .btn_style_1.active{color: #fff; background-color: #ef8204; border-color: #ef8204;}
 /* dashboard */
 .masonry-container {--gap: 22px;display: block;}
 .masonry-item {margin-bottom: var(--gap);}
@@ -378,11 +395,14 @@
     .graph_style_0_wrap{min-width: auto;}
     .graph_style_1_wrap{min-width: auto; overflow: visible; padding-right: 0;}
     .graph_style_2_wrap{min-width: auto;}
+    .graph_style_3_wrap{min-width: auto;}
 
     .filter_style_0_wrap{margin-bottom: 0;}
 
     .input_style_0_con{width: 245px;}
     .select_style_0_con{width: 120px;}
+
+    .btn_style_1_wrap{margin-top: -11px;}
 
     .plant_time_con{margin-bottom: 47px;}
     .plant_time_con .running_time{font-size:60px; font-size:6.0rem; line-height:66px; line-height:6.6rem;}
