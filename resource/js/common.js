@@ -16,13 +16,62 @@ $(function(){
     var url = location.href;
     var pageHref = url.replace(location.protocol+'//'+location.host,'');
     var menuList = $('.header_wrap .gnb_wrap > ul > li');
+    var depth2List = $('.header_wrap .gnb_wrap > ul > li > ul > li');
+    var depth3List = $('.header_wrap .gnb_wrap > ul > li > ul > li > ul > li');
 
     for(var m=0; m<menuList.length; m++){
         var menu = menuList[m];
-        if($(menu).find('> a').attr('href') == pageHref){
-            $(menu).find('> a').addClass('active');
+        for(var e=0; e<$(menu).find('a').length; e++){
+            var childMenuTag = $(menu).find('a')[e];
+            var childMenu = $(childMenuTag).parent('li');
+            if($(childMenuTag).attr('href') == pageHref){
+                $(childMenu).addClass('active effect');
+                $($(childMenu).parents('li')[0]).addClass('active effect');
+                $(menu).addClass('active effect');
+            }
         }
+        /*if($(menu).find('a').attr('href') == pageHref){
+            $(menu).addClass('active');
+        }*/
     }
+
+    $(menuList).hover(function(){
+        $(this).siblings().removeClass('effect');
+        $(this).addClass('effect');
+    }, function(){
+        if($(this).hasClass('active')){
+            $(this).addClass('effect');
+        }else{
+            $(this).removeClass('effect');
+            $(this).siblings('.active').addClass('effect');
+        }
+    });
+
+    $(depth2List).hover(function(){
+        $(this).siblings().removeClass('effect');
+        $(this).addClass('effect');
+    }, function(){
+        if($(this).hasClass('active')){
+            $(this).addClass('effect');
+        }else{
+            $(this).removeClass('effect');
+            $(this).siblings('.active').addClass('effect');
+        }
+    })
+
+    $(depth3List).hover(function(){
+        $(this).siblings().removeClass('effect');
+        $(this).addClass('effect');
+    }, function(){
+        if($(this).hasClass('active')){
+            $(this).addClass('effect');
+        }else{
+            $(this).removeClass('effect');
+            $(this).siblings('.active').addClass('effect');
+        }
+    })
+
+
 
     // 탭 객체 생성
    if($('body').find('[data-tab]').length > 0){
