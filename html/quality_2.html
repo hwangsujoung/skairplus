@@ -14,6 +14,7 @@
     <script type="text/javascript" src="/resource/js/jquery-1.12.0.js"></script>
     <script type="text/javascript" src="/resource/js/tab.js"></script>
     <script type="text/javascript" src="/resource/js/common.js"></script>
+    <script type="text/javascript" src="/resource/js/quality_2.js"></script>
 </head>
 <body>
 <div class="wrapper sub">
@@ -28,30 +29,24 @@
                 <span class="title_style_0_arrow"><img src="/resource/img/title_style_0_arrow.png" alt=""></span>
                 <span class="title_style_0 point0">ANALYZER</span>
             </div>
-            <div class="col-12 col-lg-0 fr-lg filter_style_0_wrap">
-                <div class="col-12 filter_style_0_con">
-                    <div class="select_style_0_con">
-                        <select name="" id="" class="select_style_0">
-                            <option value="분석기" hidden>분석기</option>
-                            <option value="H2O">H2O</option>
-                            <option value="O2">O2</option>
-                        </select>
-                    </div>
-                    <div class="select_style_0_con">
-                        <select name="" id="" class="select_style_0">
-                            <option value="Site" hidden>Site</option>
-                            <option value="이천">이천</option>
-                            <option value="청주">청주</option>
-                        </select>
-                    </div>
-                    <div class="input_style_0_con search">
-                        <input class="input_style_0" type="text" placeholder="검색어를 입력하세요">
-                        <a href="javascript:void(0)" class="search_btn"></a>
+            <div class="col-0 fr card_add_btn_con">
+                <a href="javascript:void(0)" class="card_add_btn" id="cardAddBtn">설비이력카드 등록</a>
+            </div>
+            <div class="col-12 section_con" data-tab="analyzer">
+                <div class="col-12 section_box">
+                    <div class="col-12 section_item">
+                        <div class="col-12 section_inner">
+                            <div class="tab_style_0_wrap border_none">
+                                <div class="tab_style_0_con">
+                                    <div class="tab_style_0 active" data-tab-menu="analyzer">운영 현황</div>
+                                    <div class="tab_style_0" data-tab-menu="analyzer">교정 현황</div>
+                                    <div class="tab_style_0" data-tab-menu="analyzer">점검 이력</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 section_con">
-                <div class="col-12 section_box">
+                <div class="col-12 section_box active" data-tab-content="analyzer">
                     <div class="col-12 col-lg-6 section_item">
                         <div class="col-12 section_inner">
                             <div class="col-12 section_content">
@@ -74,288 +69,613 @@
                                     </div>
                                 </div>
                                 <div class="col-12 content_wrap">
-                                    <div class="col-12 tab_style_3_wrap" data-tab="analyzer">
-                                        <div class="col-12 tab_style_3_con">
-                                            <div class="tab_style_3 active" data-tab-menu="analyzer">운영 현황</div>
-                                            <div class="tab_style_3" data-tab-menu="analyzer">교정 현황</div>
-                                            <div class="tab_style_3" data-tab-menu="analyzer">점검 이력</div>
+                                    <div class="col-12 content_con">
+                                        <div class="col-12 mb32 tab_style_1_wrap" data-tab>
+                                            <div class="col-12 tab_style_1_con">
+                                                <a href="javascript:void(0)" class="tab_style_1 active" data-tab-menu data-search="hide">최근이력</a>
+                                                <a href="javascript:void(0)" class="tab_style_1" data-tab-menu data-search="show">검색</a>
+                                            </div>
                                         </div>
-                                        <div class="col-12 tab_style_3_content_con">
-                                            <div class="tab_style_3_content active" data-tab-content="analyzer">
-                                                <div class="col-12 content_con">
-                                                    <div class="col-12 mb32 tab_style_1_wrap" data-tab>
-                                                        <div class="col-12 tab_style_1_con">
-                                                            <a href="javascript:void(0)" class="tab_style_1 active" data-tab-menu>최근이력</a>
-                                                            <a href="javascript:void(0)" class="tab_style_1" data-tab-menu>검색</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 table_style_2_wrap">
-                                                        <div class="col-12 table_style_2_con">
-                                                            <table class="table_style_2">
-                                                                <colgroup>
-                                                                    <col style="width:15%">
-                                                                    <col style="width:20%">
-                                                                    <col style="width:40%">
-                                                                    <col style="width:25%">
-                                                                </colgroup>
-                                                                <thead>
-                                                                <tr>
-                                                                    <th>No.</th>
-                                                                    <th>Site</th>
-                                                                    <th>분석기/Model</th>
-                                                                    <th>Action</th>
-                                                                </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td>1</td>
-                                                                    <td>이천</td>
-                                                                    <td>H2O Analyzer / HALO3</td>
-                                                                    <td>수리완료</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>2</td>
-                                                                    <td>청주</td>
-                                                                    <td>O2 Analyzer / DF550</td>
-                                                                    <td>점검</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>3</td>
-                                                                    <td>울산</td>
-                                                                    <td>GC Analyzer / MD2</td>
-                                                                    <td>교정</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>4</td>
-                                                                    <td>이천</td>
-                                                                    <td>O2 Analyzer / DF550</td>
-                                                                    <td>수리완료</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>5</td>
-                                                                    <td>청주</td>
-                                                                    <td>O2 Analyzer / DF550</td>
-                                                                    <td>점검</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>6</td>
-                                                                    <td>이천</td>
-                                                                    <td>H2O Analyzer / HALO3</td>
-                                                                    <td>수리완료</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>7</td>
-                                                                    <td>청주</td>
-                                                                    <td>O2 Analyzer / DF550</td>
-                                                                    <td>점검</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>8</td>
-                                                                    <td>울산</td>
-                                                                    <td>GC Analyzer / MD2</td>
-                                                                    <td>교정</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>9</td>
-                                                                    <td>이천</td>
-                                                                    <td>O2 Analyzer / DF550</td>
-                                                                    <td>수리완료</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>10</td>
-                                                                    <td>청주</td>
-                                                                    <td>O2 Analyzer / DF550</td>
-                                                                    <td>점검</td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </div>
+                                        <div class="col-12 col-lg-0 fr-lg filter_style_0_wrap" style="display: none; margin-bottom: 10px;">
+                                            <div class="col-12 filter_style_0_con">
+                                                <div class="select_style_0_con">
+                                                    <select name="" id="" class="select_style_0">
+                                                        <option value="분석기" hidden>분석기</option>
+                                                        <option value="H2O">H2O</option>
+                                                        <option value="O2">O2</option>
+                                                    </select>
+                                                </div>
+                                                <div class="select_style_0_con">
+                                                    <select name="" id="" class="select_style_0">
+                                                        <option value="Site" hidden>Site</option>
+                                                        <option value="이천">이천</option>
+                                                        <option value="청주">청주</option>
+                                                    </select>
+                                                </div>
+                                                <div class="input_style_0_con search">
+                                                    <input class="input_style_0" type="text" placeholder="검색어를 입력하세요">
+                                                    <a href="javascript:void(0)" class="search_btn"></a>
                                                 </div>
                                             </div>
-                                            <div class="tab_style_3_content" data-tab-content="analyzer">
-                                                <div class="col-12 content_con">
-                                                    <div class="col-12 mb32 tab_style_1_wrap" data-tab>
-                                                        <div class="col-12 tab_style_1_con">
-                                                            <a href="javascript:void(0)" class="tab_style_1 active" data-tab-menu>최근이력</a>
-                                                            <a href="javascript:void(0)" class="tab_style_1" data-tab-menu>검색</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 table_style_2_wrap">
-                                                        <div class="col-12 table_style_2_con">
-                                                            <table class="table_style_2">
-                                                                <colgroup>
-                                                                    <col style="width:15%">
-                                                                    <col style="width:20%">
-                                                                    <col style="width:40%">
-                                                                    <col style="width:25%">
-                                                                </colgroup>
-                                                                <thead>
-                                                                <tr>
-                                                                    <th>No.</th>
-                                                                    <th>Site</th>
-                                                                    <th>분석기/Model</th>
-                                                                    <th>Action</th>
-                                                                </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td>1</td>
-                                                                    <td>이천</td>
-                                                                    <td>H2O Analyzer / HALO3</td>
-                                                                    <td>수리완료</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>2</td>
-                                                                    <td>청주</td>
-                                                                    <td>O2 Analyzer / DF550</td>
-                                                                    <td>점검</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>3</td>
-                                                                    <td>울산</td>
-                                                                    <td>GC Analyzer / MD2</td>
-                                                                    <td>교정</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>4</td>
-                                                                    <td>이천</td>
-                                                                    <td>O2 Analyzer / DF550</td>
-                                                                    <td>수리완료</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>5</td>
-                                                                    <td>청주</td>
-                                                                    <td>O2 Analyzer / DF550</td>
-                                                                    <td>점검</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>6</td>
-                                                                    <td>이천</td>
-                                                                    <td>H2O Analyzer / HALO3</td>
-                                                                    <td>수리완료</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>7</td>
-                                                                    <td>청주</td>
-                                                                    <td>O2 Analyzer / DF550</td>
-                                                                    <td>점검</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>8</td>
-                                                                    <td>울산</td>
-                                                                    <td>GC Analyzer / MD2</td>
-                                                                    <td>교정</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>9</td>
-                                                                    <td>이천</td>
-                                                                    <td>O2 Analyzer / DF550</td>
-                                                                    <td>수리완료</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>10</td>
-                                                                    <td>청주</td>
-                                                                    <td>O2 Analyzer / DF550</td>
-                                                                    <td>점검</td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </div>
+                                        </div>
+                                        <div class="col-12 table_style_2_wrap">
+                                            <div class="col-12 table_style_2_con">
+                                                <table class="table_style_2">
+                                                    <colgroup>
+                                                        <col style="width:15%">
+                                                        <col style="width:20%">
+                                                        <col style="width:40%">
+                                                        <col style="width:25%">
+                                                    </colgroup>
+                                                    <thead>
+                                                    <tr>
+                                                        <th>No.</th>
+                                                        <th>Site</th>
+                                                        <th>분석기/Model</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>이천</td>
+                                                        <td>H2O Analyzer / HALO3</td>
+                                                        <td>수리완료</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>청주</td>
+                                                        <td>O2 Analyzer / DF550</td>
+                                                        <td>점검</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>울산</td>
+                                                        <td>GC Analyzer / MD2</td>
+                                                        <td>교정</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>이천</td>
+                                                        <td>O2 Analyzer / DF550</td>
+                                                        <td>수리완료</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>청주</td>
+                                                        <td>O2 Analyzer / DF550</td>
+                                                        <td>점검</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td>이천</td>
+                                                        <td>H2O Analyzer / HALO3</td>
+                                                        <td>수리완료</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td>청주</td>
+                                                        <td>O2 Analyzer / DF550</td>
+                                                        <td>점검</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
+                                                        <td>울산</td>
+                                                        <td>GC Analyzer / MD2</td>
+                                                        <td>교정</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9</td>
+                                                        <td>이천</td>
+                                                        <td>O2 Analyzer / DF550</td>
+                                                        <td>수리완료</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>청주</td>
+                                                        <td>O2 Analyzer / DF550</td>
+                                                        <td>점검</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 section_item">
+                        <div class="col-12 section_inner">
+                            <div class="col-12 pt45 pl20 pr20 pl-lg-40 pr-lg-40 title_style_0_con">
+                                <span class="title_style_0_icon"><img src="/resource/img/title_icon_008.png" alt=""></span>
+                                <span class="title_style_0">설비 이력 카드</span>
+                            </div>
+                            <div class="col-12 content_wrap">
+                                <div class="col-12 content_con">
+                                    <div class="col-12 mb15 table_style_2_wrap">
+                                        <div class="col-12 table_style_2_con">
+                                            <table class="table_style_2" style="--tdHeight: 90px;">
+                                                <colgroup>
+                                                    <col style="width:auto">
+                                                    <col style="width:auto">
+                                                    <col style="width:auto">
+                                                </colgroup>
+                                                <thead>
+                                                <tr>
+                                                    <th>Analyzer</th>
+                                                    <th>Marker & Model</th>
+                                                    <th>Detector</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>H2O 분석기</td>
+                                                    <td>HALO3 &<br/>Tiger Optics</td>
+                                                    <td>Cavity Ring-Down<br/>Spectroscopy-based</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Tag</th>
+                                                    <th>Serial  No.</th>
+                                                    <th>Measure Point</th>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Sample</th>
+                                                    <th>Site</th>
+                                                    <th>Spec</th>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Impurity</th>
+                                                    <th>관리자/번호</th>
+                                                    <th></th>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 pr22 fontsize13 fw500 tr" style="color: #8f949a;">
+                                        * Additional Detailed Information
+                                    </div>
+                                </div>
+                                <div class="col-12 pb100 content_con">
+                                    <div class="col-12 table_style_2_wrap">
+                                        <div class="col-12 table_style_2_con">
+                                            <table class="table_style_2" style="--tdHeight: 202px;">
+                                                <colgroup>
+                                                    <col style="width:auto">
+                                                    <col style="width:auto">
+                                                </colgroup>
+                                                <thead>
+                                                <tr>
+                                                    <th>Analyzer Picture</th>
+                                                    <th>분석기 Diagram</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                            <table class="table_style_2" style="--tdHeight: 72px;">
+                                                <colgroup>
+                                                    <col style="width:auto">
+                                                </colgroup>
+                                                <thead>
+                                                <tr>
+                                                    <th>Special Note</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr style="border-bottom: none;">
+                                                    <td class="tl pl20 pl-lg-40">- 교정 후기 추가 22.03.27</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 section_box" data-tab-content="analyzer">
+                    <div class="col-12 col-lg-6 section_item">
+                        <div class="col-12 section_inner">
+                            <div class="col-12 section_content">
+                                <div class="col-0 title_style_0_con">
+                                    <span class="title_style_0_icon"><img src="/resource/img/title_icon_007.png" alt=""></span>
+                                    <span class="title_style_0">교정현황 상세</span>
+                                </div>
+                                <div class="col-0 fr filter_style_0_wrap">
+                                    <div class="col-12 filter_style_0_con">
+                                        <div class="btn_style_0_con">
+                                            <a href="javascript:void(0)" class="btn_style_0">
+                                                <img src="/resource/img/pdf_icon.png" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="btn_style_0_con">
+                                            <a href="javascript:void(0)" class="btn_style_0">
+                                                <img src="/resource/img/excel_icon.png" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 content_wrap">
+                                    <div class="col-12 content_con">
+                                        <div class="col-12 mb32 tab_style_1_wrap" data-tab>
+                                            <div class="col-12 tab_style_1_con">
+                                                <a href="javascript:void(0)" class="tab_style_1 active" data-tab-menu data-search="hide">최근이력</a>
+                                                <a href="javascript:void(0)" class="tab_style_1" data-tab-menu data-search="show">검색</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-0 fr-lg filter_style_0_wrap" style="display: none; margin-bottom: 10px;">
+                                            <div class="col-12 filter_style_0_con">
+                                                <div class="select_style_0_con">
+                                                    <select name="" id="" class="select_style_0">
+                                                        <option value="분석기" hidden>분석기</option>
+                                                        <option value="H2O">H2O</option>
+                                                        <option value="O2">O2</option>
+                                                    </select>
+                                                </div>
+                                                <div class="select_style_0_con">
+                                                    <select name="" id="" class="select_style_0">
+                                                        <option value="Site" hidden>Site</option>
+                                                        <option value="이천">이천</option>
+                                                        <option value="청주">청주</option>
+                                                    </select>
+                                                </div>
+                                                <div class="input_style_0_con search">
+                                                    <input class="input_style_0" type="text" placeholder="검색어를 입력하세요">
+                                                    <a href="javascript:void(0)" class="search_btn"></a>
                                                 </div>
                                             </div>
-                                            <div class="tab_style_3_content" data-tab-content="analyzer">
-                                                <div class="col-12 content_con">
-                                                    <div class="col-12 mb32 tab_style_1_wrap" data-tab>
-                                                        <div class="col-12 tab_style_1_con">
-                                                            <a href="javascript:void(0)" class="tab_style_1 active" data-tab-menu>최근이력</a>
-                                                            <a href="javascript:void(0)" class="tab_style_1" data-tab-menu>검색</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 table_style_2_wrap">
-                                                        <div class="col-12 table_style_2_con">
-                                                            <table class="table_style_2">
-                                                                <colgroup>
-                                                                    <col style="width:15%">
-                                                                    <col style="width:20%">
-                                                                    <col style="width:40%">
-                                                                    <col style="width:25%">
-                                                                </colgroup>
-                                                                <thead>
-                                                                <tr>
-                                                                    <th>No.</th>
-                                                                    <th>Site</th>
-                                                                    <th>분석기/Model</th>
-                                                                    <th>Action</th>
-                                                                </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td>1</td>
-                                                                    <td>이천</td>
-                                                                    <td>H2O Analyzer / HALO3</td>
-                                                                    <td>수리완료</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>2</td>
-                                                                    <td>청주</td>
-                                                                    <td>O2 Analyzer / DF550</td>
-                                                                    <td>점검</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>3</td>
-                                                                    <td>울산</td>
-                                                                    <td>GC Analyzer / MD2</td>
-                                                                    <td>교정</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>4</td>
-                                                                    <td>이천</td>
-                                                                    <td>O2 Analyzer / DF550</td>
-                                                                    <td>수리완료</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>5</td>
-                                                                    <td>청주</td>
-                                                                    <td>O2 Analyzer / DF550</td>
-                                                                    <td>점검</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>6</td>
-                                                                    <td>이천</td>
-                                                                    <td>H2O Analyzer / HALO3</td>
-                                                                    <td>수리완료</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>7</td>
-                                                                    <td>청주</td>
-                                                                    <td>O2 Analyzer / DF550</td>
-                                                                    <td>점검</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>8</td>
-                                                                    <td>울산</td>
-                                                                    <td>GC Analyzer / MD2</td>
-                                                                    <td>교정</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>9</td>
-                                                                    <td>이천</td>
-                                                                    <td>O2 Analyzer / DF550</td>
-                                                                    <td>수리완료</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>10</td>
-                                                                    <td>청주</td>
-                                                                    <td>O2 Analyzer / DF550</td>
-                                                                    <td>점검</td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </div>
+                                        </div>
+                                        <div class="col-12 table_style_2_wrap">
+                                            <div class="col-12 table_style_2_con">
+                                                <table class="table_style_2">
+                                                    <colgroup>
+                                                        <col style="width:15%">
+                                                        <col style="width:20%">
+                                                        <col style="width:40%">
+                                                        <col style="width:25%">
+                                                    </colgroup>
+                                                    <thead>
+                                                    <tr>
+                                                        <th>No.</th>
+                                                        <th>Site</th>
+                                                        <th>분석기/Model</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>이천</td>
+                                                        <td>H2O Analyzer / HALO3</td>
+                                                        <td>수리완료</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>청주</td>
+                                                        <td>O2 Analyzer / DF550</td>
+                                                        <td>점검</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>울산</td>
+                                                        <td>GC Analyzer / MD2</td>
+                                                        <td>교정</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>이천</td>
+                                                        <td>O2 Analyzer / DF550</td>
+                                                        <td>수리완료</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>청주</td>
+                                                        <td>O2 Analyzer / DF550</td>
+                                                        <td>점검</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td>이천</td>
+                                                        <td>H2O Analyzer / HALO3</td>
+                                                        <td>수리완료</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td>청주</td>
+                                                        <td>O2 Analyzer / DF550</td>
+                                                        <td>점검</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
+                                                        <td>울산</td>
+                                                        <td>GC Analyzer / MD2</td>
+                                                        <td>교정</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9</td>
+                                                        <td>이천</td>
+                                                        <td>O2 Analyzer / DF550</td>
+                                                        <td>수리완료</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>청주</td>
+                                                        <td>O2 Analyzer / DF550</td>
+                                                        <td>점검</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 section_item">
+                        <div class="col-12 section_inner">
+                            <div class="col-12 pt45 pl20 pr20 pl-lg-40 pr-lg-40 title_style_0_con">
+                                <span class="title_style_0_icon"><img src="/resource/img/title_icon_008.png" alt=""></span>
+                                <span class="title_style_0">설비 이력 카드</span>
+                            </div>
+                            <div class="col-12 content_wrap">
+                                <div class="col-12 content_con">
+                                    <div class="col-12 mb15 table_style_2_wrap">
+                                        <div class="col-12 table_style_2_con">
+                                            <table class="table_style_2" style="--tdHeight: 90px;">
+                                                <colgroup>
+                                                    <col style="width:auto">
+                                                    <col style="width:auto">
+                                                    <col style="width:auto">
+                                                </colgroup>
+                                                <thead>
+                                                <tr>
+                                                    <th>Analyzer</th>
+                                                    <th>Marker & Model</th>
+                                                    <th>Detector</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>H2O 분석기</td>
+                                                    <td>HALO3 &<br/>Tiger Optics</td>
+                                                    <td>Cavity Ring-Down<br/>Spectroscopy-based</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Tag</th>
+                                                    <th>Serial  No.</th>
+                                                    <th>Measure Point</th>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Sample</th>
+                                                    <th>Site</th>
+                                                    <th>Spec</th>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Impurity</th>
+                                                    <th>관리자/번호</th>
+                                                    <th></th>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 pr22 fontsize13 fw500 tr" style="color: #8f949a;">
+                                        * Additional Detailed Information
+                                    </div>
+                                </div>
+                                <div class="col-12 pb100 content_con">
+                                    <div class="col-12 table_style_2_wrap">
+                                        <div class="col-12 table_style_2_con">
+                                            <table class="table_style_2" style="--tdHeight: 202px;">
+                                                <colgroup>
+                                                    <col style="width:auto">
+                                                    <col style="width:auto">
+                                                </colgroup>
+                                                <thead>
+                                                <tr>
+                                                    <th>Analyzer Picture</th>
+                                                    <th>분석기 Diagram</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                            <table class="table_style_2" style="--tdHeight: 72px;">
+                                                <colgroup>
+                                                    <col style="width:auto">
+                                                </colgroup>
+                                                <thead>
+                                                <tr>
+                                                    <th>Special Note</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr style="border-bottom: none;">
+                                                    <td class="tl pl20 pl-lg-40">- 교정 후기 추가 22.03.27</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 section_box" data-tab-content="analyzer">
+                    <div class="col-12 col-lg-6 section_item">
+                        <div class="col-12 section_inner">
+                            <div class="col-12 section_content">
+                                <div class="col-0 title_style_0_con">
+                                    <span class="title_style_0_icon"><img src="/resource/img/title_icon_007.png" alt=""></span>
+                                    <span class="title_style_0">점검이력 상세</span>
+                                </div>
+                                <div class="col-0 fr filter_style_0_wrap">
+                                    <div class="col-12 filter_style_0_con">
+                                        <div class="btn_style_0_con">
+                                            <a href="javascript:void(0)" class="btn_style_0">
+                                                <img src="/resource/img/pdf_icon.png" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="btn_style_0_con">
+                                            <a href="javascript:void(0)" class="btn_style_0">
+                                                <img src="/resource/img/excel_icon.png" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 content_wrap">
+                                    <div class="col-12 content_con">
+                                        <div class="col-12 mb32 tab_style_1_wrap" data-tab>
+                                            <div class="col-12 tab_style_1_con">
+                                                <a href="javascript:void(0)" class="tab_style_1 active" data-tab-menu data-search="hide">최근이력</a>
+                                                <a href="javascript:void(0)" class="tab_style_1" data-tab-menu data-search="show">검색</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-0 fr-lg filter_style_0_wrap" style="display: none; margin-bottom: 10px;">
+                                            <div class="col-12 filter_style_0_con">
+                                                <div class="select_style_0_con">
+                                                    <select name="" id="" class="select_style_0">
+                                                        <option value="분석기" hidden>분석기</option>
+                                                        <option value="H2O">H2O</option>
+                                                        <option value="O2">O2</option>
+                                                    </select>
                                                 </div>
+                                                <div class="select_style_0_con">
+                                                    <select name="" id="" class="select_style_0">
+                                                        <option value="Site" hidden>Site</option>
+                                                        <option value="이천">이천</option>
+                                                        <option value="청주">청주</option>
+                                                    </select>
+                                                </div>
+                                                <div class="input_style_0_con search">
+                                                    <input class="input_style_0" type="text" placeholder="검색어를 입력하세요">
+                                                    <a href="javascript:void(0)" class="search_btn"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 table_style_2_wrap">
+                                            <div class="col-12 table_style_2_con">
+                                                <table class="table_style_2">
+                                                    <colgroup>
+                                                        <col style="width:15%">
+                                                        <col style="width:20%">
+                                                        <col style="width:40%">
+                                                        <col style="width:25%">
+                                                    </colgroup>
+                                                    <thead>
+                                                    <tr>
+                                                        <th>No.</th>
+                                                        <th>Site</th>
+                                                        <th>분석기/Model</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>이천</td>
+                                                        <td>H2O Analyzer / HALO3</td>
+                                                        <td>수리완료</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>청주</td>
+                                                        <td>O2 Analyzer / DF550</td>
+                                                        <td>점검</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>울산</td>
+                                                        <td>GC Analyzer / MD2</td>
+                                                        <td>교정</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>이천</td>
+                                                        <td>O2 Analyzer / DF550</td>
+                                                        <td>수리완료</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>청주</td>
+                                                        <td>O2 Analyzer / DF550</td>
+                                                        <td>점검</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td>이천</td>
+                                                        <td>H2O Analyzer / HALO3</td>
+                                                        <td>수리완료</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td>청주</td>
+                                                        <td>O2 Analyzer / DF550</td>
+                                                        <td>점검</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
+                                                        <td>울산</td>
+                                                        <td>GC Analyzer / MD2</td>
+                                                        <td>교정</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9</td>
+                                                        <td>이천</td>
+                                                        <td>O2 Analyzer / DF550</td>
+                                                        <td>수리완료</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>청주</td>
+                                                        <td>O2 Analyzer / DF550</td>
+                                                        <td>점검</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
                                             </div>
                                         </div>
                                     </div>
@@ -474,11 +794,128 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 
     <!--푸터-->
     <?php include('../inc/footer.html'); ?>
+</div>
+
+<div class="col-12 popup_style_0_wrap" id="cardAddPop" style="display: none;">
+    <div class="col-12 popup_style_0_con">
+        <div class="popup_style_0_title_con">
+            <div class="title_inner">
+                <span class="title_icon"><img src="/resource/img/title_icon_008.png" alt=""></span>
+                <span class="title_text">설비이력카드 등록</span>
+            </div>
+            <div class="close_btn_con">
+                <a href="javascript:void(0)" class="close_btn" id="cardAddCloseBtn">
+                    <img src="/resource/img/popup_style_0_close_btn.png" alt="닫기">
+                </a>
+            </div>
+        </div>
+        <div class="popup_style_0_content_con">
+            <div class="popup_style_0_content">
+                <div class="popup_style_0_desc tr mb30"><span class="essential">*</span> 표시는 필수 입력 항목입니다.</div>
+                <form action="" id="cardAddForm">
+                    <div class="mb40 form_list_con">
+                        <div class="form_list">
+                            <div class="form_title">Analyzer Picture <span class="essential">*</span></div>
+                            <div class="form_input">
+                                <input type="text" class="input_style_0 w50">
+                            </div>
+                        </div>
+                        <div class="form_list">
+                            <div class="form_title">Maker & Model <span class="essential">*</span></div>
+                            <div class="form_input">
+                                <input type="text" class="input_style_0 w50">
+                            </div>
+                        </div>
+                        <div class="form_list">
+                            <div class="form_title">Detector <span class="essential">*</span></div>
+                            <div class="form_input">
+                                <input type="text" class="input_style_0">
+                            </div>
+                        </div>
+                        <div class="form_list">
+                            <div class="form_title">Tag <span class="essential">*</span></div>
+                            <div class="form_input">
+                                <input type="text" class="input_style_0">
+                            </div>
+                        </div>
+                        <div class="form_list">
+                            <div class="form_title">Serial No. <span class="essential">*</span></div>
+                            <div class="form_input">
+                                <input type="text" class="input_style_0">
+                            </div>
+                        </div>
+                        <div class="form_list">
+                            <div class="form_title">Measure Point <span class="essential">*</span></div>
+                            <div class="form_input">
+                                <input type="text" class="input_style_0">
+                            </div>
+                        </div>
+                        <div class="form_list">
+                            <div class="form_title">Sample</div>
+                            <div class="form_input">
+                                <input type="text" class="input_style_0">
+                            </div>
+                        </div>
+                        <div class="form_list">
+                            <div class="form_title">Site</div>
+                            <div class="form_input">
+                                <input type="text" class="input_style_0">
+                            </div>
+                        </div>
+                        <div class="form_list">
+                            <div class="form_title">Spec</div>
+                            <div class="form_input">
+                                <input type="text" class="input_style_0 w50">
+                            </div>
+                        </div>
+                        <div class="form_list">
+                            <div class="form_title">Impurity</div>
+                            <div class="form_input">
+                                <input type="text" class="input_style_0">
+                            </div>
+                        </div>
+                        <div class="form_list">
+                            <div class="form_title">관리자/번호</div>
+                            <div class="form_input">
+                                <input type="text" class="input_style_0 w50">
+                            </div>
+                        </div>
+                        <div class="form_list">
+                            <div class="form_title">Analyzer Picture</div>
+                            <div class="form_input type_img">
+                                <div class="img_wrap">
+                                    <label class="img_con" for="addPicture">
+                                        <img id="previewImg" src="" alt="">
+                                    </label>
+                                    <a href="javascript:void(0)" id="removeBtn" class="remove_btn" style="display: none;">
+                                        <img src="/resource/img/img_remove_btn.png" alt="삭제">
+                                    </a>
+                                </div>
+                                <label for="addPicture" id="addPictureBtn" class="file_add_btn">이미지 찾기</label>
+                                <input type="file" name="add_picture" id="addPicture" style="display: none;">
+                            </div>
+                        </div>
+                        <div class="form_list">
+                            <div class="form_title">Special Note</div>
+                            <div class="form_input">
+                                <textarea class="textarea_style_0" name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tc card_add_btn_con">
+                        <input type="submit" class="card_add_btn" value="등록하기">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 popup_style_0_dim"></div>
 </div>
 </body>
 </html>

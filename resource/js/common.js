@@ -50,16 +50,16 @@ $(function(){
         if($(this).find('> ul > li.active')) $(this).find('> ul > li.active').addClass('effect');
     });
 
-    $(depth2List).on('click',function(){
+    /*$(depth2List).on('click',function(){
         if($(this).find(' > ul').length > 0){
             if(!$(this).find(' > ul').is(':visible')) {
                 $(this).addClass('effect');
                 $(this).siblings().removeClass('effect');
             }
         }
-    })
+    })*/
 
-    /*$(depth2List).hover(function(){
+    $(depth2List).hover(function(){
         $(this).siblings().removeClass('effect');
         $(this).addClass('effect');
     }, function(){
@@ -69,7 +69,7 @@ $(function(){
             $(this).removeClass('effect');
             $(this).siblings('.active').addClass('effect');
         }
-    })*/
+    })
 
     $(depth3List).hover(function(){
         $(this).siblings().removeClass('effect');
@@ -82,8 +82,6 @@ $(function(){
             $(this).siblings('.active').addClass('effect');
         }
     })
-
-
 
     // 탭 객체 생성
    if($('body').find('[data-tab]').length > 0){
