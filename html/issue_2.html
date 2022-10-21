@@ -14,6 +14,7 @@
     <script type="text/javascript" src="/resource/js/jquery-1.12.0.js"></script>
     <script type="text/javascript" src="/resource/js/tab.js"></script>
     <script type="text/javascript" src="/resource/js/common.js"></script>
+    <script type="text/javascript" src="/resource/js/issue_2.js"></script>
 </head>
 <body>
 <div class="wrapper sub">
@@ -23,10 +24,13 @@
     <!--컨텐츠-->
     <div class="container">
         <div class="col-12 section">
-            <div class="col-12 mb25 mb-lg-40 section_title_con">
+            <div class="col-0 mb25 mb-lg-40 section_title_con">
                 <span class="title_style_0 point0">ISSUE</span>
                 <span class="title_style_0_arrow"><img src="/resource/img/title_style_0_arrow.png" alt=""></span>
                 <span class="title_style_0 point0">SV 상세</span>
+            </div>
+            <div class="col-0 fr card_add_btn_con">
+                <a href="javascript:void(0)" class="card_add_btn" id="reportAddBtn">이상발생보고서 등록</a>
             </div>
             <div class="col-12 section_con">
                 <div class="col-12 section_box">
@@ -50,21 +54,22 @@
                                         </div>
                                         <div class="col-12 tab_style_3_content_con">
                                             <div class="tab_style_3_content active" data-tab-content>
-                                                <div class="col-12 mb30 title_style_2">
-                                                    <span class="point0">공급압력</span>
-                                                </div>
-                                                <div class="col-12 content_con">
+                                                <div class="col-12 col-lg-6 pr-lg-20 content_con">
+                                                    <div class="col-12 mb30 title_style_2">
+                                                        <span class="point0">공급압력</span>
+                                                    </div>
                                                     <div class="col-12 table_style_2_wrap">
                                                         <div class="col-12 table_style_2_con">
-                                                            <table class="table_style_2">
+                                                            <table class="table_style_2" style="min-width: 1200px;">
                                                                 <colgroup>
-                                                                    <col style="width:11%">
-                                                                    <col style="width:11%">
-                                                                    <col style="width:13%">
-                                                                    <col style="width:14%">
-                                                                    <col style="width:13%">
-                                                                    <col style="width:25%">
-                                                                    <col style="width:13%">
+                                                                    <col style="width:6%">
+                                                                    <col style="width:6%">
+                                                                    <col style="width:8%">
+                                                                    <col style="width:6%">
+                                                                    <col style="width:19%">
+                                                                    <col style="width:22%">
+                                                                    <col style="width:17%">
+                                                                    <col style="width:17%">
                                                                 </colgroup>
                                                                 <thead>
                                                                 <tr>
@@ -75,6 +80,7 @@
                                                                     <th>Due Date</th>
                                                                     <th>Cause</th>
                                                                     <th>Action</th>
+                                                                    <th>첨부파일</th>
                                                                 </tr>
                                                                 </thead>
                                                                 <tbody>
@@ -83,18 +89,38 @@
                                                                     <td>ML222</td>
                                                                     <td>08.02 18:03</td>
                                                                     <td>1K52</td>
-                                                                    <td>08.02 18:03</td>
-                                                                    <td>압력 변동에 따른 HUNTING</td>
-                                                                    <td>ZERO 교정</td>
+                                                                    <td><input type="datetime-local" class="input_style_0 pr8"></td>
+                                                                    <td><input type="text" class="input_style_0"></td>
+                                                                    <td><input type="text" class="input_style_0"></td>
+                                                                    <td>
+                                                                        <div class="file_con">
+                                                                            <label for="file_0" class="file_add_btn">첨부파일</label>
+                                                                            <input type="file" id="file_0" class="">
+                                                                            <div class="file_name_con" style="display: none;">
+                                                                                <span class="file_name"></span>
+                                                                                <a href="javascript:void(0)" class="file_delete_btn"></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>O2</td>
                                                                     <td>DLTA-F</td>
                                                                     <td>08.02 18:03</td>
                                                                     <td>1E205</td>
-                                                                    <td>08.02 18:03</td>
-                                                                    <td>압력 변동에 따른 HUNTING</td>
-                                                                    <td>ZERO 교정</td>
+                                                                    <td><input type="datetime-local" class="input_style_0 pr8"></td>
+                                                                    <td><input type="text" class="input_style_0"></td>
+                                                                    <td><input type="text" class="input_style_0"></td>
+                                                                    <td>
+                                                                        <div class="file_con">
+                                                                            <label for="file_1" class="file_add_btn">첨부파일</label>
+                                                                            <input type="file" id="file_1" class="">
+                                                                            <div class="file_name_con" style="display: none;">
+                                                                                <span class="file_name"></span>
+                                                                                <a href="javascript:void(0)" class="file_delete_btn"></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -104,6 +130,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -113,6 +140,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -122,6 +150,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -131,6 +160,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -140,6 +170,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -149,6 +180,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -158,6 +190,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -167,6 +200,122 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-6 pl-lg-20 content_con">
+                                                    <div class="col-12 mb30">
+                                                        <span class="show vm pr7"><img src="/resource/img/title_icon_008.png" alt=""></span><span class="show vm fontsize16 fw700">이상발생보고서</span>
+                                                    </div>
+                                                    <div class="col-12 table_style_2_wrap">
+                                                        <div class="col-12 table_style_2_con">
+                                                            <table class="table_style_2" style="--tdHeight: 90px;">
+                                                                <colgroup>
+                                                                    <col style="width:auto">
+                                                                    <col style="width:auto">
+                                                                    <col style="width:auto">
+                                                                </colgroup>
+                                                                <thead>
+                                                                <tr>
+                                                                    <th>SIte</th>
+                                                                    <th>부서</th>
+                                                                    <th>발생일</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td>울산공장</td>
+                                                                    <td>기술2팀</td>
+                                                                    <td>2022-10-11 / PM 10:00</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>작성자</th>
+                                                                    <th>분류</th>
+                                                                    <th>발생장소</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>전병구</td>
+                                                                    <td>공장사고</td>
+                                                                    <td>울산 ASU #1호기</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th colspan="3">내용</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="3">울산 공장 ASU #1 호기 Compreesor Rrip 에따른 공정 정지 발생</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>설비명</th>
+                                                                    <th>발생상황</th>
+                                                                    <th>사고등급</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>공급압력설비</td>
+                                                                    <td>정상 운전중</td>
+                                                                    <td>B등급</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>관련 Tag</th>
+                                                                    <th>조치완료</th>
+                                                                    <th>조치현황</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td>2022-10-11</td>
+                                                                    <td>완료</td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <table class="table_style_2" style="--tdHeight: 105px;">
+                                                                <colgroup>
+                                                                    <col style="width:auto">
+                                                                </colgroup>
+                                                                <thead>
+                                                                <tr>
+                                                                    <th class="tl pl20 pr20">1. 이상내용 (현상 및 문제점)</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td class="tl pl20 pr20">
+                                                                        공급압력에 대한 작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        압력에 대한 작동시 이상현상이 발생되어 발생보고서를 작성하였습니다.
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="tl pl20 pr20">2. 원인 및 개선 대책</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="tl pl20 pr20">
+                                                                        공급압력에 대한 작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        압력에 대한 작동시 이상현상이 발생되어 발생보고서를 작성하였습니다.
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="tl pl20 pr20">3. 처리 결과</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="tl pl20 pr20">
+                                                                        공급압력에 대한 작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        압력에 대한 작동시 이상현상이 발생되어 발생보고서를 작성하였습니다.
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="tl pl20 pr20">4. 처리 결과 및 유효성 확인</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="tl pl20 pr20">
+                                                                        공급압력에 대한 작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        압력에 대한 작동시 이상현상이 발생되어 발생보고서를 작성하였습니다.
+                                                                    </td>
                                                                 </tr>
                                                                 </tbody>
                                                             </table>
@@ -175,21 +324,22 @@
                                                 </div>
                                             </div>
                                             <div class="tab_style_3_content" data-tab-content>
-                                                <div class="col-12 mb30 title_style_2">
-                                                    <span class="point0">공급순도</span>
-                                                </div>
-                                                <div class="col-12 content_con">
+                                                <div class="col-12 col-lg-6 pr-lg-20 content_con">
+                                                    <div class="col-12 mb30 title_style_2">
+                                                        <span class="point0">공급순도</span>
+                                                    </div>
                                                     <div class="col-12 table_style_2_wrap">
                                                         <div class="col-12 table_style_2_con">
-                                                            <table class="table_style_2">
+                                                            <table class="table_style_2" style="min-width: 1200px;">
                                                                 <colgroup>
-                                                                    <col style="width:11%">
-                                                                    <col style="width:11%">
-                                                                    <col style="width:13%">
-                                                                    <col style="width:14%">
-                                                                    <col style="width:13%">
-                                                                    <col style="width:25%">
-                                                                    <col style="width:13%">
+                                                                    <col style="width:6%">
+                                                                    <col style="width:6%">
+                                                                    <col style="width:8%">
+                                                                    <col style="width:6%">
+                                                                    <col style="width:19%">
+                                                                    <col style="width:22%">
+                                                                    <col style="width:17%">
+                                                                    <col style="width:17%">
                                                                 </colgroup>
                                                                 <thead>
                                                                 <tr>
@@ -200,6 +350,7 @@
                                                                     <th>Due Date</th>
                                                                     <th>Cause</th>
                                                                     <th>Action</th>
+                                                                    <th>첨부파일</th>
                                                                 </tr>
                                                                 </thead>
                                                                 <tbody>
@@ -208,18 +359,38 @@
                                                                     <td>ML222</td>
                                                                     <td>08.02 18:03</td>
                                                                     <td>1K52</td>
-                                                                    <td>08.02 18:03</td>
-                                                                    <td>압력 변동에 따른 HUNTING</td>
-                                                                    <td>ZERO 교정</td>
+                                                                    <td><input type="datetime-local" class="input_style_0 pr8"></td>
+                                                                    <td><input type="text" class="input_style_0"></td>
+                                                                    <td><input type="text" class="input_style_0"></td>
+                                                                    <td>
+                                                                        <div class="file_con">
+                                                                            <label for="file_0" class="file_add_btn">첨부파일</label>
+                                                                            <input type="file" id="file_0" class="">
+                                                                            <div class="file_name_con" style="display: none;">
+                                                                                <span class="file_name"></span>
+                                                                                <a href="javascript:void(0)" class="file_delete_btn"></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>O2</td>
                                                                     <td>DLTA-F</td>
                                                                     <td>08.02 18:03</td>
                                                                     <td>1E205</td>
-                                                                    <td>08.02 18:03</td>
-                                                                    <td>압력 변동에 따른 HUNTING</td>
-                                                                    <td>ZERO 교정</td>
+                                                                    <td><input type="datetime-local" class="input_style_0 pr8"></td>
+                                                                    <td><input type="text" class="input_style_0"></td>
+                                                                    <td><input type="text" class="input_style_0"></td>
+                                                                    <td>
+                                                                        <div class="file_con">
+                                                                            <label for="file_1" class="file_add_btn">첨부파일</label>
+                                                                            <input type="file" id="file_1" class="">
+                                                                            <div class="file_name_con" style="display: none;">
+                                                                                <span class="file_name"></span>
+                                                                                <a href="javascript:void(0)" class="file_delete_btn"></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -229,6 +400,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -238,6 +410,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -247,6 +420,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -256,6 +430,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -265,6 +440,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -274,6 +450,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -283,6 +460,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -292,6 +470,122 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-6 pl-lg-20 content_con">
+                                                    <div class="col-12 mb30">
+                                                        <span class="show vm pr7"><img src="/resource/img/title_icon_008.png" alt=""></span><span class="show vm fontsize16 fw700">이상발생보고서</span>
+                                                    </div>
+                                                    <div class="col-12 table_style_2_wrap">
+                                                        <div class="col-12 table_style_2_con">
+                                                            <table class="table_style_2" style="--tdHeight: 90px;">
+                                                                <colgroup>
+                                                                    <col style="width:auto">
+                                                                    <col style="width:auto">
+                                                                    <col style="width:auto">
+                                                                </colgroup>
+                                                                <thead>
+                                                                <tr>
+                                                                    <th>SIte</th>
+                                                                    <th>부서</th>
+                                                                    <th>발생일</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td>울산공장</td>
+                                                                    <td>기술2팀</td>
+                                                                    <td>2022-10-11 / PM 10:00</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>작성자</th>
+                                                                    <th>분류</th>
+                                                                    <th>발생장소</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>전병구</td>
+                                                                    <td>공장사고</td>
+                                                                    <td>울산 ASU #1호기</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th colspan="3">내용</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="3">울산 공장 ASU #1 호기 Compreesor Rrip 에따른 공정 정지 발생</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>설비명</th>
+                                                                    <th>발생상황</th>
+                                                                    <th>사고등급</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>공급압력설비</td>
+                                                                    <td>정상 운전중</td>
+                                                                    <td>B등급</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>관련 Tag</th>
+                                                                    <th>조치완료</th>
+                                                                    <th>조치현황</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td>2022-10-11</td>
+                                                                    <td>완료</td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <table class="table_style_2" style="--tdHeight: 105px;">
+                                                                <colgroup>
+                                                                    <col style="width:auto">
+                                                                </colgroup>
+                                                                <thead>
+                                                                <tr>
+                                                                    <th class="tl pl20 pr20">1. 이상내용 (현상 및 문제점)</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td class="tl pl20 pr20">
+                                                                        공급압력에 대한 작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        압력에 대한 작동시 이상현상이 발생되어 발생보고서를 작성하였습니다.
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="tl pl20 pr20">2. 원인 및 개선 대책</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="tl pl20 pr20">
+                                                                        공급압력에 대한 작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        압력에 대한 작동시 이상현상이 발생되어 발생보고서를 작성하였습니다.
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="tl pl20 pr20">3. 처리 결과</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="tl pl20 pr20">
+                                                                        공급압력에 대한 작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        압력에 대한 작동시 이상현상이 발생되어 발생보고서를 작성하였습니다.
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="tl pl20 pr20">4. 처리 결과 및 유효성 확인</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="tl pl20 pr20">
+                                                                        공급압력에 대한 작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        압력에 대한 작동시 이상현상이 발생되어 발생보고서를 작성하였습니다.
+                                                                    </td>
                                                                 </tr>
                                                                 </tbody>
                                                             </table>
@@ -300,21 +594,22 @@
                                                 </div>
                                             </div>
                                             <div class="tab_style_3_content" data-tab-content>
-                                                <div class="col-12 mb30 title_style_2">
-                                                    <span class="point0">Bulk 순도</span>
-                                                </div>
-                                                <div class="col-12 content_con">
+                                                <div class="col-12 col-lg-6 pr-lg-20 content_con">
+                                                    <div class="col-12 mb30 title_style_2">
+                                                        <span class="point0">Bulk 순도</span>
+                                                    </div>
                                                     <div class="col-12 table_style_2_wrap">
                                                         <div class="col-12 table_style_2_con">
-                                                            <table class="table_style_2">
+                                                            <table class="table_style_2" style="min-width: 1200px;">
                                                                 <colgroup>
-                                                                    <col style="width:11%">
-                                                                    <col style="width:11%">
-                                                                    <col style="width:13%">
-                                                                    <col style="width:14%">
-                                                                    <col style="width:13%">
-                                                                    <col style="width:25%">
-                                                                    <col style="width:13%">
+                                                                    <col style="width:6%">
+                                                                    <col style="width:6%">
+                                                                    <col style="width:8%">
+                                                                    <col style="width:6%">
+                                                                    <col style="width:19%">
+                                                                    <col style="width:22%">
+                                                                    <col style="width:17%">
+                                                                    <col style="width:17%">
                                                                 </colgroup>
                                                                 <thead>
                                                                 <tr>
@@ -325,6 +620,7 @@
                                                                     <th>Due Date</th>
                                                                     <th>Cause</th>
                                                                     <th>Action</th>
+                                                                    <th>첨부파일</th>
                                                                 </tr>
                                                                 </thead>
                                                                 <tbody>
@@ -333,18 +629,38 @@
                                                                     <td>ML222</td>
                                                                     <td>08.02 18:03</td>
                                                                     <td>1K52</td>
-                                                                    <td>08.02 18:03</td>
-                                                                    <td>압력 변동에 따른 HUNTING</td>
-                                                                    <td>ZERO 교정</td>
+                                                                    <td><input type="datetime-local" class="input_style_0 pr8"></td>
+                                                                    <td><input type="text" class="input_style_0"></td>
+                                                                    <td><input type="text" class="input_style_0"></td>
+                                                                    <td>
+                                                                        <div class="file_con">
+                                                                            <label for="file_0" class="file_add_btn">첨부파일</label>
+                                                                            <input type="file" id="file_0" class="">
+                                                                            <div class="file_name_con" style="display: none;">
+                                                                                <span class="file_name"></span>
+                                                                                <a href="javascript:void(0)" class="file_delete_btn"></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>O2</td>
                                                                     <td>DLTA-F</td>
                                                                     <td>08.02 18:03</td>
                                                                     <td>1E205</td>
-                                                                    <td>08.02 18:03</td>
-                                                                    <td>압력 변동에 따른 HUNTING</td>
-                                                                    <td>ZERO 교정</td>
+                                                                    <td><input type="datetime-local" class="input_style_0 pr8"></td>
+                                                                    <td><input type="text" class="input_style_0"></td>
+                                                                    <td><input type="text" class="input_style_0"></td>
+                                                                    <td>
+                                                                        <div class="file_con">
+                                                                            <label for="file_1" class="file_add_btn">첨부파일</label>
+                                                                            <input type="file" id="file_1" class="">
+                                                                            <div class="file_name_con" style="display: none;">
+                                                                                <span class="file_name"></span>
+                                                                                <a href="javascript:void(0)" class="file_delete_btn"></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -354,6 +670,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -363,6 +680,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -372,6 +690,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -381,6 +700,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -390,6 +710,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -399,6 +720,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -408,6 +730,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -417,6 +740,122 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-6 pl-lg-20 content_con">
+                                                    <div class="col-12 mb30">
+                                                        <span class="show vm pr7"><img src="/resource/img/title_icon_008.png" alt=""></span><span class="show vm fontsize16 fw700">이상발생보고서</span>
+                                                    </div>
+                                                    <div class="col-12 table_style_2_wrap">
+                                                        <div class="col-12 table_style_2_con">
+                                                            <table class="table_style_2" style="--tdHeight: 90px;">
+                                                                <colgroup>
+                                                                    <col style="width:auto">
+                                                                    <col style="width:auto">
+                                                                    <col style="width:auto">
+                                                                </colgroup>
+                                                                <thead>
+                                                                <tr>
+                                                                    <th>SIte</th>
+                                                                    <th>부서</th>
+                                                                    <th>발생일</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td>울산공장</td>
+                                                                    <td>기술2팀</td>
+                                                                    <td>2022-10-11 / PM 10:00</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>작성자</th>
+                                                                    <th>분류</th>
+                                                                    <th>발생장소</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>전병구</td>
+                                                                    <td>공장사고</td>
+                                                                    <td>울산 ASU #1호기</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th colspan="3">내용</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="3">울산 공장 ASU #1 호기 Compreesor Rrip 에따른 공정 정지 발생</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>설비명</th>
+                                                                    <th>발생상황</th>
+                                                                    <th>사고등급</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>공급압력설비</td>
+                                                                    <td>정상 운전중</td>
+                                                                    <td>B등급</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>관련 Tag</th>
+                                                                    <th>조치완료</th>
+                                                                    <th>조치현황</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td>2022-10-11</td>
+                                                                    <td>완료</td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <table class="table_style_2" style="--tdHeight: 105px;">
+                                                                <colgroup>
+                                                                    <col style="width:auto">
+                                                                </colgroup>
+                                                                <thead>
+                                                                <tr>
+                                                                    <th class="tl pl20 pr20">1. 이상내용 (현상 및 문제점)</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td class="tl pl20 pr20">
+                                                                        공급압력에 대한 작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        압력에 대한 작동시 이상현상이 발생되어 발생보고서를 작성하였습니다.
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="tl pl20 pr20">2. 원인 및 개선 대책</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="tl pl20 pr20">
+                                                                        공급압력에 대한 작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        압력에 대한 작동시 이상현상이 발생되어 발생보고서를 작성하였습니다.
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="tl pl20 pr20">3. 처리 결과</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="tl pl20 pr20">
+                                                                        공급압력에 대한 작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        압력에 대한 작동시 이상현상이 발생되어 발생보고서를 작성하였습니다.
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="tl pl20 pr20">4. 처리 결과 및 유효성 확인</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="tl pl20 pr20">
+                                                                        공급압력에 대한 작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        압력에 대한 작동시 이상현상이 발생되어 발생보고서를 작성하였습니다.
+                                                                    </td>
                                                                 </tr>
                                                                 </tbody>
                                                             </table>
@@ -425,21 +864,22 @@
                                                 </div>
                                             </div>
                                             <div class="tab_style_3_content" data-tab-content>
-                                                <div class="col-12 mb30 title_style_2">
-                                                    <span class="point0">공정순도</span>
-                                                </div>
-                                                <div class="col-12 content_con">
+                                                <div class="col-12 col-lg-6 pr-lg-20 content_con">
+                                                    <div class="col-12 mb30 title_style_2">
+                                                        <span class="point0">공정순도</span>
+                                                    </div>
                                                     <div class="col-12 table_style_2_wrap">
                                                         <div class="col-12 table_style_2_con">
-                                                            <table class="table_style_2">
+                                                            <table class="table_style_2" style="min-width: 1200px;">
                                                                 <colgroup>
-                                                                    <col style="width:11%">
-                                                                    <col style="width:11%">
-                                                                    <col style="width:13%">
-                                                                    <col style="width:14%">
-                                                                    <col style="width:13%">
-                                                                    <col style="width:25%">
-                                                                    <col style="width:13%">
+                                                                    <col style="width:6%">
+                                                                    <col style="width:6%">
+                                                                    <col style="width:8%">
+                                                                    <col style="width:6%">
+                                                                    <col style="width:19%">
+                                                                    <col style="width:22%">
+                                                                    <col style="width:17%">
+                                                                    <col style="width:17%">
                                                                 </colgroup>
                                                                 <thead>
                                                                 <tr>
@@ -450,6 +890,7 @@
                                                                     <th>Due Date</th>
                                                                     <th>Cause</th>
                                                                     <th>Action</th>
+                                                                    <th>첨부파일</th>
                                                                 </tr>
                                                                 </thead>
                                                                 <tbody>
@@ -458,18 +899,38 @@
                                                                     <td>ML222</td>
                                                                     <td>08.02 18:03</td>
                                                                     <td>1K52</td>
-                                                                    <td>08.02 18:03</td>
-                                                                    <td>압력 변동에 따른 HUNTING</td>
-                                                                    <td>ZERO 교정</td>
+                                                                    <td><input type="datetime-local" class="input_style_0 pr8"></td>
+                                                                    <td><input type="text" class="input_style_0"></td>
+                                                                    <td><input type="text" class="input_style_0"></td>
+                                                                    <td>
+                                                                        <div class="file_con">
+                                                                            <label for="file_0" class="file_add_btn">첨부파일</label>
+                                                                            <input type="file" id="file_0" class="">
+                                                                            <div class="file_name_con" style="display: none;">
+                                                                                <span class="file_name"></span>
+                                                                                <a href="javascript:void(0)" class="file_delete_btn"></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>O2</td>
                                                                     <td>DLTA-F</td>
                                                                     <td>08.02 18:03</td>
                                                                     <td>1E205</td>
-                                                                    <td>08.02 18:03</td>
-                                                                    <td>압력 변동에 따른 HUNTING</td>
-                                                                    <td>ZERO 교정</td>
+                                                                    <td><input type="datetime-local" class="input_style_0 pr8"></td>
+                                                                    <td><input type="text" class="input_style_0"></td>
+                                                                    <td><input type="text" class="input_style_0"></td>
+                                                                    <td>
+                                                                        <div class="file_con">
+                                                                            <label for="file_1" class="file_add_btn">첨부파일</label>
+                                                                            <input type="file" id="file_1" class="">
+                                                                            <div class="file_name_con" style="display: none;">
+                                                                                <span class="file_name"></span>
+                                                                                <a href="javascript:void(0)" class="file_delete_btn"></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -479,6 +940,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -488,6 +950,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -497,6 +960,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -506,6 +970,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -515,6 +980,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -524,6 +990,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -533,6 +1000,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -542,6 +1010,122 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-6 pl-lg-20 content_con">
+                                                    <div class="col-12 mb30">
+                                                        <span class="show vm pr7"><img src="/resource/img/title_icon_008.png" alt=""></span><span class="show vm fontsize16 fw700">이상발생보고서</span>
+                                                    </div>
+                                                    <div class="col-12 table_style_2_wrap">
+                                                        <div class="col-12 table_style_2_con">
+                                                            <table class="table_style_2" style="--tdHeight: 90px;">
+                                                                <colgroup>
+                                                                    <col style="width:auto">
+                                                                    <col style="width:auto">
+                                                                    <col style="width:auto">
+                                                                </colgroup>
+                                                                <thead>
+                                                                <tr>
+                                                                    <th>SIte</th>
+                                                                    <th>부서</th>
+                                                                    <th>발생일</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td>울산공장</td>
+                                                                    <td>기술2팀</td>
+                                                                    <td>2022-10-11 / PM 10:00</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>작성자</th>
+                                                                    <th>분류</th>
+                                                                    <th>발생장소</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>전병구</td>
+                                                                    <td>공장사고</td>
+                                                                    <td>울산 ASU #1호기</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th colspan="3">내용</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="3">울산 공장 ASU #1 호기 Compreesor Rrip 에따른 공정 정지 발생</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>설비명</th>
+                                                                    <th>발생상황</th>
+                                                                    <th>사고등급</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>공급압력설비</td>
+                                                                    <td>정상 운전중</td>
+                                                                    <td>B등급</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>관련 Tag</th>
+                                                                    <th>조치완료</th>
+                                                                    <th>조치현황</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td>2022-10-11</td>
+                                                                    <td>완료</td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <table class="table_style_2" style="--tdHeight: 105px;">
+                                                                <colgroup>
+                                                                    <col style="width:auto">
+                                                                </colgroup>
+                                                                <thead>
+                                                                <tr>
+                                                                    <th class="tl pl20 pr20">1. 이상내용 (현상 및 문제점)</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td class="tl pl20 pr20">
+                                                                        공급압력에 대한 작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        압력에 대한 작동시 이상현상이 발생되어 발생보고서를 작성하였습니다.
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="tl pl20 pr20">2. 원인 및 개선 대책</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="tl pl20 pr20">
+                                                                        공급압력에 대한 작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        압력에 대한 작동시 이상현상이 발생되어 발생보고서를 작성하였습니다.
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="tl pl20 pr20">3. 처리 결과</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="tl pl20 pr20">
+                                                                        공급압력에 대한 작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        압력에 대한 작동시 이상현상이 발생되어 발생보고서를 작성하였습니다.
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="tl pl20 pr20">4. 처리 결과 및 유효성 확인</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="tl pl20 pr20">
+                                                                        공급압력에 대한 작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        압력에 대한 작동시 이상현상이 발생되어 발생보고서를 작성하였습니다.
+                                                                    </td>
                                                                 </tr>
                                                                 </tbody>
                                                             </table>
@@ -550,21 +1134,22 @@
                                                 </div>
                                             </div>
                                             <div class="tab_style_3_content" data-tab-content>
-                                                <div class="col-12 mb30 title_style_2">
-                                                    <span class="point0">공정압력</span>
-                                                </div>
-                                                <div class="col-12 content_con">
+                                                <div class="col-12 col-lg-6 pr-lg-20 content_con">
+                                                    <div class="col-12 mb30 title_style_2">
+                                                        <span class="point0">공정압력</span>
+                                                    </div>
                                                     <div class="col-12 table_style_2_wrap">
                                                         <div class="col-12 table_style_2_con">
-                                                            <table class="table_style_2">
+                                                            <table class="table_style_2" style="min-width: 1200px;">
                                                                 <colgroup>
-                                                                    <col style="width:11%">
-                                                                    <col style="width:11%">
-                                                                    <col style="width:13%">
-                                                                    <col style="width:14%">
-                                                                    <col style="width:13%">
-                                                                    <col style="width:25%">
-                                                                    <col style="width:13%">
+                                                                    <col style="width:6%">
+                                                                    <col style="width:6%">
+                                                                    <col style="width:8%">
+                                                                    <col style="width:6%">
+                                                                    <col style="width:19%">
+                                                                    <col style="width:22%">
+                                                                    <col style="width:17%">
+                                                                    <col style="width:17%">
                                                                 </colgroup>
                                                                 <thead>
                                                                 <tr>
@@ -575,6 +1160,7 @@
                                                                     <th>Due Date</th>
                                                                     <th>Cause</th>
                                                                     <th>Action</th>
+                                                                    <th>첨부파일</th>
                                                                 </tr>
                                                                 </thead>
                                                                 <tbody>
@@ -583,18 +1169,38 @@
                                                                     <td>ML222</td>
                                                                     <td>08.02 18:03</td>
                                                                     <td>1K52</td>
-                                                                    <td>08.02 18:03</td>
-                                                                    <td>압력 변동에 따른 HUNTING</td>
-                                                                    <td>ZERO 교정</td>
+                                                                    <td><input type="datetime-local" class="input_style_0 pr8"></td>
+                                                                    <td><input type="text" class="input_style_0"></td>
+                                                                    <td><input type="text" class="input_style_0"></td>
+                                                                    <td>
+                                                                        <div class="file_con">
+                                                                            <label for="file_0" class="file_add_btn">첨부파일</label>
+                                                                            <input type="file" id="file_0" class="">
+                                                                            <div class="file_name_con" style="display: none;">
+                                                                                <span class="file_name"></span>
+                                                                                <a href="javascript:void(0)" class="file_delete_btn"></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>O2</td>
                                                                     <td>DLTA-F</td>
                                                                     <td>08.02 18:03</td>
                                                                     <td>1E205</td>
-                                                                    <td>08.02 18:03</td>
-                                                                    <td>압력 변동에 따른 HUNTING</td>
-                                                                    <td>ZERO 교정</td>
+                                                                    <td><input type="datetime-local" class="input_style_0 pr8"></td>
+                                                                    <td><input type="text" class="input_style_0"></td>
+                                                                    <td><input type="text" class="input_style_0"></td>
+                                                                    <td>
+                                                                        <div class="file_con">
+                                                                            <label for="file_1" class="file_add_btn">첨부파일</label>
+                                                                            <input type="file" id="file_1" class="">
+                                                                            <div class="file_name_con" style="display: none;">
+                                                                                <span class="file_name"></span>
+                                                                                <a href="javascript:void(0)" class="file_delete_btn"></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -604,6 +1210,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -613,6 +1220,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -622,6 +1230,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -631,6 +1240,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -640,6 +1250,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -649,6 +1260,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -658,6 +1270,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -667,6 +1280,122 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-6 pl-lg-20 content_con">
+                                                    <div class="col-12 mb30">
+                                                        <span class="show vm pr7"><img src="/resource/img/title_icon_008.png" alt=""></span><span class="show vm fontsize16 fw700">이상발생보고서</span>
+                                                    </div>
+                                                    <div class="col-12 table_style_2_wrap">
+                                                        <div class="col-12 table_style_2_con">
+                                                            <table class="table_style_2" style="--tdHeight: 90px;">
+                                                                <colgroup>
+                                                                    <col style="width:auto">
+                                                                    <col style="width:auto">
+                                                                    <col style="width:auto">
+                                                                </colgroup>
+                                                                <thead>
+                                                                <tr>
+                                                                    <th>SIte</th>
+                                                                    <th>부서</th>
+                                                                    <th>발생일</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td>울산공장</td>
+                                                                    <td>기술2팀</td>
+                                                                    <td>2022-10-11 / PM 10:00</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>작성자</th>
+                                                                    <th>분류</th>
+                                                                    <th>발생장소</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>전병구</td>
+                                                                    <td>공장사고</td>
+                                                                    <td>울산 ASU #1호기</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th colspan="3">내용</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="3">울산 공장 ASU #1 호기 Compreesor Rrip 에따른 공정 정지 발생</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>설비명</th>
+                                                                    <th>발생상황</th>
+                                                                    <th>사고등급</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>공급압력설비</td>
+                                                                    <td>정상 운전중</td>
+                                                                    <td>B등급</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>관련 Tag</th>
+                                                                    <th>조치완료</th>
+                                                                    <th>조치현황</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td>2022-10-11</td>
+                                                                    <td>완료</td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <table class="table_style_2" style="--tdHeight: 105px;">
+                                                                <colgroup>
+                                                                    <col style="width:auto">
+                                                                </colgroup>
+                                                                <thead>
+                                                                <tr>
+                                                                    <th class="tl pl20 pr20">1. 이상내용 (현상 및 문제점)</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td class="tl pl20 pr20">
+                                                                        공급압력에 대한 작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        압력에 대한 작동시 이상현상이 발생되어 발생보고서를 작성하였습니다.
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="tl pl20 pr20">2. 원인 및 개선 대책</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="tl pl20 pr20">
+                                                                        공급압력에 대한 작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        압력에 대한 작동시 이상현상이 발생되어 발생보고서를 작성하였습니다.
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="tl pl20 pr20">3. 처리 결과</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="tl pl20 pr20">
+                                                                        공급압력에 대한 작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        압력에 대한 작동시 이상현상이 발생되어 발생보고서를 작성하였습니다.
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="tl pl20 pr20">4. 처리 결과 및 유효성 확인</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="tl pl20 pr20">
+                                                                        공급압력에 대한 작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        압력에 대한 작동시 이상현상이 발생되어 발생보고서를 작성하였습니다.
+                                                                    </td>
                                                                 </tr>
                                                                 </tbody>
                                                             </table>
@@ -675,21 +1404,22 @@
                                                 </div>
                                             </div>
                                             <div class="tab_style_3_content" data-tab-content>
-                                                <div class="col-12 mb30 title_style_2">
-                                                    <span class="point0">공정온도</span>
-                                                </div>
-                                                <div class="col-12 content_con">
+                                                <div class="col-12 col-lg-6 pr-lg-20 content_con">
+                                                    <div class="col-12 mb30 title_style_2">
+                                                        <span class="point0">공정온도</span>
+                                                    </div>
                                                     <div class="col-12 table_style_2_wrap">
                                                         <div class="col-12 table_style_2_con">
-                                                            <table class="table_style_2">
+                                                            <table class="table_style_2" style="min-width: 1200px;">
                                                                 <colgroup>
-                                                                    <col style="width:11%">
-                                                                    <col style="width:11%">
-                                                                    <col style="width:13%">
-                                                                    <col style="width:14%">
-                                                                    <col style="width:13%">
-                                                                    <col style="width:25%">
-                                                                    <col style="width:13%">
+                                                                    <col style="width:6%">
+                                                                    <col style="width:6%">
+                                                                    <col style="width:8%">
+                                                                    <col style="width:6%">
+                                                                    <col style="width:19%">
+                                                                    <col style="width:22%">
+                                                                    <col style="width:17%">
+                                                                    <col style="width:17%">
                                                                 </colgroup>
                                                                 <thead>
                                                                 <tr>
@@ -700,6 +1430,7 @@
                                                                     <th>Due Date</th>
                                                                     <th>Cause</th>
                                                                     <th>Action</th>
+                                                                    <th>첨부파일</th>
                                                                 </tr>
                                                                 </thead>
                                                                 <tbody>
@@ -708,18 +1439,38 @@
                                                                     <td>ML222</td>
                                                                     <td>08.02 18:03</td>
                                                                     <td>1K52</td>
-                                                                    <td>08.02 18:03</td>
-                                                                    <td>압력 변동에 따른 HUNTING</td>
-                                                                    <td>ZERO 교정</td>
+                                                                    <td><input type="datetime-local" class="input_style_0 pr8"></td>
+                                                                    <td><input type="text" class="input_style_0"></td>
+                                                                    <td><input type="text" class="input_style_0"></td>
+                                                                    <td>
+                                                                        <div class="file_con">
+                                                                            <label for="file_0" class="file_add_btn">첨부파일</label>
+                                                                            <input type="file" id="file_0" class="">
+                                                                            <div class="file_name_con" style="display: none;">
+                                                                                <span class="file_name"></span>
+                                                                                <a href="javascript:void(0)" class="file_delete_btn"></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>O2</td>
                                                                     <td>DLTA-F</td>
                                                                     <td>08.02 18:03</td>
                                                                     <td>1E205</td>
-                                                                    <td>08.02 18:03</td>
-                                                                    <td>압력 변동에 따른 HUNTING</td>
-                                                                    <td>ZERO 교정</td>
+                                                                    <td><input type="datetime-local" class="input_style_0 pr8"></td>
+                                                                    <td><input type="text" class="input_style_0"></td>
+                                                                    <td><input type="text" class="input_style_0"></td>
+                                                                    <td>
+                                                                        <div class="file_con">
+                                                                            <label for="file_1" class="file_add_btn">첨부파일</label>
+                                                                            <input type="file" id="file_1" class="">
+                                                                            <div class="file_name_con" style="display: none;">
+                                                                                <span class="file_name"></span>
+                                                                                <a href="javascript:void(0)" class="file_delete_btn"></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -729,6 +1480,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -738,6 +1490,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -747,6 +1500,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -756,6 +1510,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -765,6 +1520,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -774,6 +1530,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -783,6 +1540,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -792,6 +1550,122 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-6 pl-lg-20 content_con">
+                                                    <div class="col-12 mb30">
+                                                        <span class="show vm pr7"><img src="/resource/img/title_icon_008.png" alt=""></span><span class="show vm fontsize16 fw700">이상발생보고서</span>
+                                                    </div>
+                                                    <div class="col-12 table_style_2_wrap">
+                                                        <div class="col-12 table_style_2_con">
+                                                            <table class="table_style_2" style="--tdHeight: 90px;">
+                                                                <colgroup>
+                                                                    <col style="width:auto">
+                                                                    <col style="width:auto">
+                                                                    <col style="width:auto">
+                                                                </colgroup>
+                                                                <thead>
+                                                                <tr>
+                                                                    <th>SIte</th>
+                                                                    <th>부서</th>
+                                                                    <th>발생일</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td>울산공장</td>
+                                                                    <td>기술2팀</td>
+                                                                    <td>2022-10-11 / PM 10:00</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>작성자</th>
+                                                                    <th>분류</th>
+                                                                    <th>발생장소</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>전병구</td>
+                                                                    <td>공장사고</td>
+                                                                    <td>울산 ASU #1호기</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th colspan="3">내용</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="3">울산 공장 ASU #1 호기 Compreesor Rrip 에따른 공정 정지 발생</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>설비명</th>
+                                                                    <th>발생상황</th>
+                                                                    <th>사고등급</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>공급압력설비</td>
+                                                                    <td>정상 운전중</td>
+                                                                    <td>B등급</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>관련 Tag</th>
+                                                                    <th>조치완료</th>
+                                                                    <th>조치현황</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td>2022-10-11</td>
+                                                                    <td>완료</td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <table class="table_style_2" style="--tdHeight: 105px;">
+                                                                <colgroup>
+                                                                    <col style="width:auto">
+                                                                </colgroup>
+                                                                <thead>
+                                                                <tr>
+                                                                    <th class="tl pl20 pr20">1. 이상내용 (현상 및 문제점)</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td class="tl pl20 pr20">
+                                                                        공급압력에 대한 작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        압력에 대한 작동시 이상현상이 발생되어 발생보고서를 작성하였습니다.
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="tl pl20 pr20">2. 원인 및 개선 대책</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="tl pl20 pr20">
+                                                                        공급압력에 대한 작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        압력에 대한 작동시 이상현상이 발생되어 발생보고서를 작성하였습니다.
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="tl pl20 pr20">3. 처리 결과</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="tl pl20 pr20">
+                                                                        공급압력에 대한 작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        압력에 대한 작동시 이상현상이 발생되어 발생보고서를 작성하였습니다.
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="tl pl20 pr20">4. 처리 결과 및 유효성 확인</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="tl pl20 pr20">
+                                                                        공급압력에 대한 작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        압력에 대한 작동시 이상현상이 발생되어 발생보고서를 작성하였습니다.
+                                                                    </td>
                                                                 </tr>
                                                                 </tbody>
                                                             </table>
@@ -800,21 +1674,22 @@
                                                 </div>
                                             </div>
                                             <div class="tab_style_3_content" data-tab-content>
-                                                <div class="col-12 mb30 title_style_2">
-                                                    <span class="point0">Report</span>
-                                                </div>
-                                                <div class="col-12 content_con">
+                                                <div class="col-12 col-lg-6 pr-lg-20 content_con">
+                                                    <div class="col-12 mb30 title_style_2">
+                                                        <span class="point0">Report</span>
+                                                    </div>
                                                     <div class="col-12 table_style_2_wrap">
                                                         <div class="col-12 table_style_2_con">
-                                                            <table class="table_style_2">
+                                                            <table class="table_style_2" style="min-width: 1200px;">
                                                                 <colgroup>
-                                                                    <col style="width:11%">
-                                                                    <col style="width:11%">
-                                                                    <col style="width:13%">
-                                                                    <col style="width:14%">
-                                                                    <col style="width:13%">
-                                                                    <col style="width:25%">
-                                                                    <col style="width:13%">
+                                                                    <col style="width:6%">
+                                                                    <col style="width:6%">
+                                                                    <col style="width:8%">
+                                                                    <col style="width:6%">
+                                                                    <col style="width:19%">
+                                                                    <col style="width:22%">
+                                                                    <col style="width:17%">
+                                                                    <col style="width:17%">
                                                                 </colgroup>
                                                                 <thead>
                                                                 <tr>
@@ -825,6 +1700,7 @@
                                                                     <th>Due Date</th>
                                                                     <th>Cause</th>
                                                                     <th>Action</th>
+                                                                    <th>첨부파일</th>
                                                                 </tr>
                                                                 </thead>
                                                                 <tbody>
@@ -833,18 +1709,38 @@
                                                                     <td>ML222</td>
                                                                     <td>08.02 18:03</td>
                                                                     <td>1K52</td>
-                                                                    <td>08.02 18:03</td>
-                                                                    <td>압력 변동에 따른 HUNTING</td>
-                                                                    <td>ZERO 교정</td>
+                                                                    <td><input type="datetime-local" class="input_style_0 pr8"></td>
+                                                                    <td><input type="text" class="input_style_0"></td>
+                                                                    <td><input type="text" class="input_style_0"></td>
+                                                                    <td>
+                                                                        <div class="file_con">
+                                                                            <label for="file_0" class="file_add_btn">첨부파일</label>
+                                                                            <input type="file" id="file_0" class="">
+                                                                            <div class="file_name_con" style="display: none;">
+                                                                                <span class="file_name"></span>
+                                                                                <a href="javascript:void(0)" class="file_delete_btn"></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>O2</td>
                                                                     <td>DLTA-F</td>
                                                                     <td>08.02 18:03</td>
                                                                     <td>1E205</td>
-                                                                    <td>08.02 18:03</td>
-                                                                    <td>압력 변동에 따른 HUNTING</td>
-                                                                    <td>ZERO 교정</td>
+                                                                    <td><input type="datetime-local" class="input_style_0 pr8"></td>
+                                                                    <td><input type="text" class="input_style_0"></td>
+                                                                    <td><input type="text" class="input_style_0"></td>
+                                                                    <td>
+                                                                        <div class="file_con">
+                                                                            <label for="file_1" class="file_add_btn">첨부파일</label>
+                                                                            <input type="file" id="file_1" class="">
+                                                                            <div class="file_name_con" style="display: none;">
+                                                                                <span class="file_name"></span>
+                                                                                <a href="javascript:void(0)" class="file_delete_btn"></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -854,6 +1750,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -863,6 +1760,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -872,6 +1770,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -881,6 +1780,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -890,6 +1790,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -899,6 +1800,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -908,6 +1810,7 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>CO2</td>
@@ -917,6 +1820,122 @@
                                                                     <td>08.02 18:03</td>
                                                                     <td>압력 변동에 따른 HUNTING</td>
                                                                     <td>ZERO 교정</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-6 pl-lg-20 content_con">
+                                                    <div class="col-12 mb30">
+                                                        <span class="show vm pr7"><img src="/resource/img/title_icon_008.png" alt=""></span><span class="show vm fontsize16 fw700">이상발생보고서</span>
+                                                    </div>
+                                                    <div class="col-12 table_style_2_wrap">
+                                                        <div class="col-12 table_style_2_con">
+                                                            <table class="table_style_2" style="--tdHeight: 90px;">
+                                                                <colgroup>
+                                                                    <col style="width:auto">
+                                                                    <col style="width:auto">
+                                                                    <col style="width:auto">
+                                                                </colgroup>
+                                                                <thead>
+                                                                <tr>
+                                                                    <th>SIte</th>
+                                                                    <th>부서</th>
+                                                                    <th>발생일</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td>울산공장</td>
+                                                                    <td>기술2팀</td>
+                                                                    <td>2022-10-11 / PM 10:00</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>작성자</th>
+                                                                    <th>분류</th>
+                                                                    <th>발생장소</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>전병구</td>
+                                                                    <td>공장사고</td>
+                                                                    <td>울산 ASU #1호기</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th colspan="3">내용</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="3">울산 공장 ASU #1 호기 Compreesor Rrip 에따른 공정 정지 발생</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>설비명</th>
+                                                                    <th>발생상황</th>
+                                                                    <th>사고등급</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>공급압력설비</td>
+                                                                    <td>정상 운전중</td>
+                                                                    <td>B등급</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>관련 Tag</th>
+                                                                    <th>조치완료</th>
+                                                                    <th>조치현황</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td>2022-10-11</td>
+                                                                    <td>완료</td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <table class="table_style_2" style="--tdHeight: 105px;">
+                                                                <colgroup>
+                                                                    <col style="width:auto">
+                                                                </colgroup>
+                                                                <thead>
+                                                                <tr>
+                                                                    <th class="tl pl20 pr20">1. 이상내용 (현상 및 문제점)</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td class="tl pl20 pr20">
+                                                                        공급압력에 대한 작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        압력에 대한 작동시 이상현상이 발생되어 발생보고서를 작성하였습니다.
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="tl pl20 pr20">2. 원인 및 개선 대책</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="tl pl20 pr20">
+                                                                        공급압력에 대한 작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        압력에 대한 작동시 이상현상이 발생되어 발생보고서를 작성하였습니다.
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="tl pl20 pr20">3. 처리 결과</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="tl pl20 pr20">
+                                                                        공급압력에 대한 작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        압력에 대한 작동시 이상현상이 발생되어 발생보고서를 작성하였습니다.
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="tl pl20 pr20">4. 처리 결과 및 유효성 확인</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="tl pl20 pr20">
+                                                                        공급압력에 대한 작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        작동시 이상현상이 발생되어 이상발생보고서를 작성하였습니다.
+                                                                        압력에 대한 작동시 이상현상이 발생되어 발생보고서를 작성하였습니다.
+                                                                    </td>
                                                                 </tr>
                                                                 </tbody>
                                                             </table>
@@ -937,6 +1956,136 @@
 
     <!--푸터-->
     <?php include('../inc/footer.html'); ?>
+</div>
+<div class="col-12 popup_style_0_wrap" id="reportAddPop" style="display: none;">
+    <div class="col-12 popup_style_0_con">
+        <div class="popup_style_0_title_con">
+            <div class="title_inner">
+                <span class="title_icon"><img src="/resource/img/title_icon_008.png" alt=""></span>
+                <span class="title_text">이상발생보고서 등록</span>
+            </div>
+            <div class="close_btn_con">
+                <a href="javascript:void(0)" class="close_btn" id="reportAddCloseBtn">
+                    <img src="/resource/img/popup_style_0_close_btn.png" alt="닫기">
+                </a>
+            </div>
+        </div>
+        <div class="popup_style_0_content_con">
+            <div class="popup_style_0_content">
+                <div class="popup_style_0_desc tr mb30"><span class="essential">*</span> 표시는 필수 입력 항목입니다.</div>
+                <form action="" id="reportAddForm">
+                    <div class="mb40 form_list_con">
+                        <div class="form_list">
+                            <div class="form_title">Site <span class="essential">*</span></div>
+                            <div class="form_input">
+                                <input type="text" class="input_style_1 w50">
+                            </div>
+                        </div>
+                        <div class="form_list">
+                            <div class="form_title">부서 <span class="essential">*</span></div>
+                            <div class="form_input">
+                                <input type="text" class="input_style_1 w50">
+                            </div>
+                        </div>
+                        <div class="form_list">
+                            <div class="form_title">발생일 <span class="essential">*</span></div>
+                            <div class="form_input">
+                                <input type="datetime-local" class="input_style_1 w50">
+                            </div>
+                        </div>
+                        <div class="form_list">
+                            <div class="form_title">작성자 <span class="essential">*</span></div>
+                            <div class="form_input">
+                                <input type="text" class="input_style_1 w50">
+                            </div>
+                        </div>
+                        <div class="form_list">
+                            <div class="form_title">분류 <span class="essential">*</span></div>
+                            <div class="form_input">
+                                <input type="text" class="input_style_1">
+                            </div>
+                        </div>
+                        <div class="form_list">
+                            <div class="form_title">발생장소 <span class="essential">*</span></div>
+                            <div class="form_input">
+                                <input type="text" class="input_style_1">
+                            </div>
+                        </div>
+                        <div class="form_list">
+                            <div class="form_title">내용</div>
+                            <div class="form_input">
+                                <input type="text" class="input_style_1">
+                            </div>
+                        </div>
+                        <div class="form_list">
+                            <div class="form_title">설비명</div>
+                            <div class="form_input">
+                                <input type="text" class="input_style_1">
+                            </div>
+                        </div>
+                        <div class="form_list">
+                            <div class="form_title">발생상황</div>
+                            <div class="form_input">
+                                <input type="text" class="input_style_1">
+                            </div>
+                        </div>
+                        <div class="form_list">
+                            <div class="form_title">사고등급</div>
+                            <div class="form_input">
+                                <input type="text" class="input_style_1 w50">
+                            </div>
+                        </div>
+                        <div class="form_list">
+                            <div class="form_title">관련 Tag</div>
+                            <div class="form_input">
+                                <input type="text" class="input_style_1">
+                            </div>
+                        </div>
+                        <div class="form_list">
+                            <div class="form_title">조치완료</div>
+                            <div class="form_input">
+                                <input type="date" class="input_style_1 w50">
+                            </div>
+                        </div>
+                        <div class="form_list">
+                            <div class="form_title">조치현황</div>
+                            <div class="form_input">
+                                <input type="text" class="input_style_1 w50">
+                            </div>
+                        </div>
+                        <div class="form_list">
+                            <div class="form_title">이상내용<br/>(현상 및 문제점)</div>
+                            <div class="form_input">
+                                <textarea class="textarea_style_0" name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                        <div class="form_list">
+                            <div class="form_title">원인 및 개선대책</div>
+                            <div class="form_input">
+                                <textarea class="textarea_style_0" name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                        <div class="form_list">
+                            <div class="form_title">처리 결과</div>
+                            <div class="form_input">
+                                <textarea class="textarea_style_0" name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                        <div class="form_list">
+                            <div class="form_title">처리 결과 및<br/>유효성 확인</div>
+                            <div class="form_input">
+                                <textarea class="textarea_style_0" name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tc card_add_btn_con">
+                        <input type="submit" class="card_add_btn" value="등록하기">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 popup_style_0_dim"></div>
 </div>
 </body>
 </html>
