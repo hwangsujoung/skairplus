@@ -178,7 +178,12 @@
                                                 </div>
                                                 <div class="col-12 col-lg-6 pl-lg-20 content_con">
                                                     <div class="col-12 mb36">
-                                                        <span class="show vm pr7"><img src="/resource/img/title_icon_008.png" alt=""></span><span class="show vm fontsize16 fw700">설비이력카드</span>
+                                                        <div class="col-0">
+                                                            <span class="show vm pr7"><img src="/resource/img/title_icon_008.png" alt=""></span><span class="show vm fontsize16 fw700">설비이력카드</span>
+                                                        </div>
+                                                        <div class="col-0 fr card_add_btn_con type_2">
+                                                            <a href="javascript:void(0)" class="card_add_btn" id="historyAddBtn">운영이력 등록</a>
+                                                        </div>
                                                     </div>
                                                     <div class="col-12 mb20 table_style_2_wrap">
                                                         <div class="col-12 table_style_2_con">
@@ -800,6 +805,296 @@
                 </div>
             </div>
             <div class="col-12 popup_style_0_dim"></div>
+        </div>
+        <div class="col-12 popup_style_1_wrap" id="historyPop" style="display: none;">
+            <div class="col-12 popup_style_1_con type_2">
+                <div class="popup_style_1_title_con">
+                    <div class="title_inner">
+                        <span class="title_icon"><img src="/resource/img/title_icon_008.png" alt=""></span>
+                        <span class="title_text">설비 이력카드 등록</span>
+                    </div>
+                    <div class="close_btn_con">
+                        <a href="javascript:void(0)" class="close_btn" id="historyPopCloseBtn">
+                            <img src="/resource/img/popup_style_0_close_btn.png" alt="닫기">
+                        </a>
+                    </div>
+                    <div class="btn_style_2_con">
+                        <a href="javascript:void(0)" class="btn_style_2">저장</a>
+                        <a href="javascript:void(0)" class="btn_style_2">삭제</a>
+                    </div>
+                </div>
+                <div class="popup_style_1_content_con">
+                    <div class="right_con">
+                        <div class="popup_style_1_content">
+                            <form action="" id="plantRunningTimeForm">
+                                <div class="form_list_con">
+                                    <div class="form_list">
+                                        <div class="form_title">Date</div>
+                                        <div class="form_input">
+                                            <input type="datetime-local" class="input_style_0">
+                                        </div>
+                                    </div>
+                                    <div class="form_list">
+                                        <div class="form_title">Type</div>
+                                        <div class="form_input">
+                                            <div class="select_style_0_con" style="width: 100%;">
+                                                <select name="" id="" class="select_style_0">
+                                                    <option value="" hidden=""></option>
+                                                    <option value="2022">2022</option>
+                                                    <option value="2021">2021</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_list">
+                                        <div class="form_title">Comment</div>
+                                        <div class="form_input">
+                                            <textarea name="" class="textarea_style_1" style="height: 136px;"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="left_con">
+                        <div class="table_style_2_wrap h-100">
+                            <div class="table_style_2_con h-100">
+                                <table class="table_style_2" id="historyTable" style="min-width: 600px;">
+                                    <colgroup>
+                                        <col style="width:50px">
+                                        <col style="width:160px">
+                                        <col style="width:80px">
+                                        <col style="width:auto">
+                                        <col style="width:100px">
+                                        <col style="width:85px">
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="show vm check_style_0_con">
+                                                <input type="checkbox" class="check_style_0" id="history_all" name="history" data-all-check>
+                                                <label for="history_all"></label>
+                                            </div>
+                                        </th>
+                                        <th>DATE</th>
+                                        <th>TYPE</th>
+                                        <th>Cause</th>
+                                        <th>Result</th>
+                                        <th>상세</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="show vm check_style_0_con">
+                                                <input type="checkbox" class="check_style_0" id="history_1" name="history" data-check>
+                                                <label for="history_1"></label>
+                                            </div>
+                                        </td>
+                                        <td class="fw700">2020.03.26</td>
+                                        <td>Error</td>
+                                        <td>Type 지정하여 목차 분류할것</td>
+                                        <td>O</td>
+                                        <td>
+                                            <div class="btn_style_2_con">
+                                                <a href="javascript:void(0)" class="btn_style_2" id="detailAddBtn" data-detail-btn="add">상세등록</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="show vm check_style_0_con">
+                                                <input type="checkbox" class="check_style_0" id="history_2" name="history" data-check>
+                                                <label for="history_2"></label>
+                                            </div>
+                                        </td>
+                                        <td class="fw700">2020.03.26</td>
+                                        <td>Error</td>
+                                        <td>Type 지정하여 목차 분류할것</td>
+                                        <td>O</td>
+                                        <td>
+                                            <div class="btn_style_2_con">
+                                                <a href="javascript:void(0)" class="btn_style_2 white" id="detailViewBtn" data-detail-btn="view">상세보기</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="show vm check_style_0_con">
+                                                <input type="checkbox" class="check_style_0" id="history_3" name="history" data-check>
+                                                <label for="history_3"></label>
+                                            </div>
+                                        </td>
+                                        <td class="fw700">2020.03.26</td>
+                                        <td>Error</td>
+                                        <td>Type 지정하여 목차 분류할것</td>
+                                        <td>O</td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="show vm check_style_0_con">
+                                                <input type="checkbox" class="check_style_0" id="history_4" name="history" data-check>
+                                                <label for="history_4"></label>
+                                            </div>
+                                        </td>
+                                        <td class="fw700">2020.03.26</td>
+                                        <td>Error</td>
+                                        <td>Type 지정하여 목차 분류할것</td>
+                                        <td>O</td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="show vm check_style_0_con">
+                                                <input type="checkbox" class="check_style_0" id="history_5" name="history" data-check>
+                                                <label for="history_5"></label>
+                                            </div>
+                                        </td>
+                                        <td class="fw700">2020.03.26</td>
+                                        <td>Error</td>
+                                        <td>Type 지정하여 목차 분류할것</td>
+                                        <td>O</td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-12 popup_style_1_dim"></div>
+        </div>
+        <div class="col-12 popup_style_1_wrap" id="detailAddPop" style="display: none;">
+            <div class="col-12 popup_style_1_con type_2">
+                <div class="popup_style_1_title_con">
+                    <div class="title_inner">
+                        <span class="title_icon"><img src="/resource/img/title_icon_008.png" alt=""></span>
+                        <span class="title_text">Result Report</span>
+                    </div>
+                    <div class="close_btn_con">
+                        <a href="javascript:void(0)" class="close_btn" id="detailPopCloseBtn">
+                            <img src="/resource/img/popup_style_0_close_btn.png" alt="닫기">
+                        </a>
+                    </div>
+                    <div class="btn_style_2_con">
+                        <a href="javascript:void(0)" class="btn_style_2">확인</a>
+                    </div>
+                </div>
+                <div class="popup_style_1_content_con">
+                    <div class="popup_style_1_content">
+                        <form class="col-12" action="" id="plantRunningTimeForm">
+                            <div class="form_list_con type_2">
+                                <div class="col-6 col-sm-3 form_list">
+                                    <div class="form_title">발생일자</div>
+                                    <div class="form_input">
+                                        <input type="datetime-local" class="input_style_0">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-3 form_list">
+                                    <div class="form_title">완료일자</div>
+                                    <div class="form_input">
+                                        <input type="datetime-local" class="input_style_0">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-3 form_list">
+                                    <div class="form_title">소요일자</div>
+                                    <div class="form_input">
+                                        <input type="text" class="input_style_0">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-3 form_list">
+                                    <div class="form_title">담당자</div>
+                                    <div class="form_input">
+                                        <input type="text" class="input_style_0">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 form_list">
+                                    <div class="form_title">발생원인</div>
+                                    <div class="form_input">
+                                        <textarea name="" class="textarea_style_1""></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 form_list">
+                                    <div class="form_title">조치 및 결과</div>
+                                    <div class="form_input">
+                                        <textarea name="" class="textarea_style_1""></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 popup_style_1_dim"></div>
+        </div>
+        <div class="col-12 popup_style_1_wrap" id="detailViewPop" style="display: none;">
+            <div class="col-12 popup_style_1_con type_2">
+                <div class="popup_style_1_title_con">
+                    <div class="title_inner">
+                        <span class="title_icon"><img src="/resource/img/title_icon_008.png" alt=""></span>
+                        <span class="title_text">Result Report</span>
+                    </div>
+                    <div class="close_btn_con">
+                        <a href="javascript:void(0)" class="close_btn" id="detailViewPopCloseBtn">
+                            <img src="/resource/img/popup_style_0_close_btn.png" alt="닫기">
+                        </a>
+                    </div>
+                    <div class="btn_style_2_con">
+                        <a href="javascript:void(0)" class="btn_style_2">확인</a>
+                    </div>
+                </div>
+                <div class="popup_style_1_content_con">
+                    <div class="popup_style_1_content">
+                        <form class="col-12" action="" id="plantRunningTimeForm">
+                            <div class="form_list_con type_2">
+                                <div class="col-6 col-sm-3 form_list">
+                                    <div class="form_title">발생일자</div>
+                                    <div class="form_input">
+                                        <input type="datetime-local" class="input_style_0" value="2020-03-26 09:00">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-3 form_list">
+                                    <div class="form_title">완료일자</div>
+                                    <div class="form_input">
+                                        <input type="datetime-local" class="input_style_0" value="2020-09-01 09:00">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-3 form_list">
+                                    <div class="form_title">소요일자</div>
+                                    <div class="form_input">
+                                        <input type="text" class="input_style_0" value="6월 7일">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-3 form_list">
+                                    <div class="form_title">담당자</div>
+                                    <div class="form_input">
+                                        <input type="text" class="input_style_0" value="생산기술팀 전병구 PL">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 form_list">
+                                    <div class="form_title">발생원인</div>
+                                    <div class="form_input">
+                                        <textarea name="" class="textarea_style_1">이번 운영에서 발생된 현상은 앞으로 개선하기 위한 여러가지 방법을 제시하는데 중요한 역할을 하며 겨울의 추위에 취약한 측면이 있습니다.</textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 form_list">
+                                    <div class="form_title">조치 및 결과</div>
+                                    <div class="form_input">
+                                        <textarea name="" class="textarea_style_1">이번 운영에서 발생된 현상은 앞으로 개선하기 위한 여러가지 방법을 제시하는데 중요한 역할을 하며 겨울의 추위에 취약한 측면이 있습니다.</textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 popup_style_1_dim"></div>
         </div>
     </div>
 
