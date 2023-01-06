@@ -53,6 +53,7 @@
 .content_wrap:last-child{margin-bottom: 0;}
 .content_wrap .content_con{overflow-y: auto; margin-bottom: 50px;}
 .content_wrap .content_con:last-child{margin-bottom: 0;}
+.content_wrap .content_con.over-hidden{overflow: hidden;}
 
 .content_wrap .content_title_con{display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px;}
 .content_wrap .content_title_con .left_con{font-size:0px; font-size:0rem; line-height:0px; line-height:0.0rem; }
@@ -265,17 +266,18 @@
 .table_style_1 tbody td.tr{text-align: right;}
 
 .table_style_2_wrap{}
-.table_style_2_wrap .table_style_2_con{overflow-y: auto;}
+.table_style_2_wrap .table_style_2_con{overflow-y: auto; max-height: 600px;}
 .table_style_2_wrap .table_style_2_con::-webkit-scrollbar{width: 18px; height: 18px; background-color: transparent;}
 .table_style_2_wrap .table_style_2_con::-webkit-scrollbar-thumb{background-clip: padding-box; border: 6px solid transparent; background-color: #a8b5c6;}
 .table_style_2_wrap .table_style_2_con::-webkit-scrollbar-track{background-color: #f2f2f9; border: 6px solid #fff;}
 .table_style_2{--tdHeight: 55px; min-width: 530px; border-collapse: collapse; table-layout: fixed;}
-.table_style_2 thead tr{border-top: 2px solid #a8b5c6;}
-.table_style_2 thead th{height: 48px; font-size:13px; font-size:1.3rem; line-height:19px; line-height:1.9rem; font-weight: 500; color: #8f949a; text-align: center;
+.table_style_2 thead tr{/*border-top: 2px solid #a8b5c6;*/}
+.table_style_2 thead th{position: sticky; top: 0; height: 48px; font-size:13px; font-size:1.3rem; line-height:19px; line-height:1.9rem; font-weight: 500; color: #8f949a; text-align: center;
     background-color: #fbfbfb; padding: 15px 5px; box-sizing: border-box;}
+.table_style_2 thead th:after{ content: ''; position: absolute; top: 0; left: 0; height: 100%; width: 100%; border-top: 2px solid #a8b5c6; border-bottom: 1px solid #e7e7f3; box-sizing: border-box;}
 .table_style_2 thead th.tl{text-align: left;}
 .table_style_2 thead th.pl20{padding-left: 20px;}
-.table_style_2 tbody tr:first-child{border-top: 1px solid #e7e7f3;}
+.table_style_2 tbody tr:first-child{/*border-top: 1px solid #e7e7f3;*/}
 .table_style_2 tbody tr{border-bottom: 1px solid #e7e7f3;}
 .table_style_2 tbody th{height: 48px; font-size:13px; font-size:1.3rem; line-height:19px; line-height:1.9rem; font-weight: 500; color: #8f949a; text-align: center;
     background-color: #fbfbfb; padding: 15px 5px; box-sizing: border-box;}
